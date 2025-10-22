@@ -1,0 +1,2629 @@
+menu_title: '&nRankUp Menu'
+open_command:
+- 'rank'
+- 'ranks'
+- 'rankup'
+- 'rankups'
+register_command: false
+size: 54
+items:
+  ##### FILL #####
+
+  'fill-01':
+    material: GRAY_STAINED_GLASS_PANE
+    slots:
+    - 0-35
+    display_name: "&r"
+  'fill-02':
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+    - 36-53
+    display_name: "&r"
+
+  ##### BACK #####
+
+  'back-main-menu':
+    material: arrow
+    slot: 45
+    display_name: '&#FF3333&lBack'
+    lore:
+    - '&7&o(( Back to'
+    - '&7&omain menu ))'
+    - ''
+    - '&#FF3333&l➥ &#FF3333Click to go back'
+    click_commands:
+    - '[openguimenu] main_menu'
+
+  ##### PAGES #####
+
+  'current-page':
+    material: honeycomb
+    slot: 49
+    display_name: '&#FFFF33&lCurrent Page &8(&f1/3&8)'
+    lore:
+    - '&7&o(( You are on the first'
+    - '&7&opage of rankups ))'
+    click_commands:
+    - '[refresh]'
+  'menu-rankup-2':
+    material: spectral_arrow
+    slot: 50
+    display_name: '&#33FF33&lNext Page -->'
+    lore:
+    - '&7&o(( Go to the'
+    - '&7&onext page ))'
+    - ''
+    - '&#33FF33&l➥ &#33FF33Click to go'
+    click_commands:
+    - '[openguimenu] rankup_2'
+
+  ##### RANKUP 1 #####
+
+  'prestige-0-rankup-1-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 0
+    priority: 1
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.1'
+    display_name: "&fRankUp | &a｢1 ✦｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC1 Hour ⌚'
+    - '&8▪ &fMoney Needed &#feb801$1M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - '&8▪ &fSlots: &#9FFB08+1 ⛺'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-0-rankup-1-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 0
+    priority: 2
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    display_name: '&fRankUp | &a｢1 ✦｣'
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC1 Hour ⌚'
+    - '&8▪ &fMoney Needed &#feb801$1M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - '&8▪ &fSlots: &#9FFB08+1 ⛺'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 1'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou have not played enough! %statistic_hours_played%/1
+            hour ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 1000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/1M
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 1000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&a｢1 ✦｣ "' #This space is needed for chat format :)
+    - '[console] lp user %player_name% permission set rankup.1'
+    - '[console] gens multiplier give %player_name% 0.2'
+    - '[console] gens slots give %player_name% 1'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Rankup &a｢1 ✦｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+
+  ##### RANKUP 2 #####
+
+  'prestige-0-rankup-2-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 9
+    priority: 1
+    amount: 2
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.2'
+    display_name: "&fRankUp | &a｢2 ✦｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC3 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$3M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-0-rankup-2-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 9
+    priority: 2
+    amount: 2
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.1'
+    display_name: '&fRankUp | &a｢2 ✦｣'
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC3 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$3M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 3'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou have not played enough! %statistic_hours_played%/3
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 3000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/3M
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 3000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&a｢2 ✦｣ "'
+    - '[console] lp user %player_name% permission set rankup.2'
+    - '[console] gens multiplier give %player_name% 0.2'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Rankup &a｢2 ✦｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-0-rankup-2-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 9
+    priority: 3
+    amount: 2
+    display_name: '&fRankUp | &a｢2 ✦｣'
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC3 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$3M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### RANKUP 3 #####
+
+  'prestige-0-rankup-3-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 18
+    priority: 1
+    amount: 3
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.3'
+    display_name: "&fRankUp | &a｢3 ✦｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC6 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$8M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - '&8▪ &fSlots: &#9FFB08+1 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1 &7(50 Uses)'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-0-rankup-3-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 18
+    priority: 2
+    amount: 3
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.2'
+    display_name: '&fRankUp | &a｢3 ✦｣'
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC6 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$8M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - '&8▪ &fSlots: &#9FFB08+1 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1 &7(50 Uses)'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 6'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou have not played enough! %statistic_hours_played%/6
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 8000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/8M
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 8000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&a｢3 ✦｣ "'
+    - '[console] lp user %player_name% permission set rankup.3'
+    - '[console] gens multiplier give %player_name% 0.2'
+    - '[console] gens slots give %player_name% 1'
+    - '[console] gens sellwand %player_name% x1-0_sellwand_50_uses'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Rankup &a｢3 ✦｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-0-rankup-3-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 18
+    priority: 3
+    amount: 3
+    display_name: '&fRankUp | &a｢3 ✦｣'
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC6 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$8M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - '&8▪ &fSlots: &#9FFB08+1 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1 &7(50 Uses)'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### RANKUP 4 #####
+
+  'prestige-0-rankup-4-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 27
+    priority: 1
+    amount: 4
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.4'
+    display_name: "&fRankUp | &a｢4 ✦｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC8 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$12M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-0-rankup-4-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 27
+    priority: 2
+    amount: 4
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.3'
+    display_name: '&fRankUp | &a｢4 ✦｣'
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC8 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$12M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 8'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou have not played enough! %statistic_hours_played%/8
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 12000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/12M
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 12000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&a｢4 ✦｣ "'
+    - '[console] lp user %player_name% permission set rankup.4'
+    - '[console] gens multiplier give %player_name% 0.2'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Rankup &a｢4 ✦｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-0-rankup-4-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 27
+    priority: 3
+    amount: 4
+    display_name: '&fRankUp | &a｢4 ✦｣'
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC8 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$12M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### RANKUP 5 #####
+
+  'prestige-0-rankup-5-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 28
+    priority: 1
+    amount: 5
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.5'
+    display_name: "&fRankUp | &a｢5 ✦｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC10 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$20M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-0-rankup-5-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 28
+    priority: 2
+    amount: 5
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.4'
+    display_name: '&fRankUp | &a｢5 ✦｣'
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC10 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$20M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 10'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou have not played enough! %statistic_hours_played%/10
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 20000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/20M
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 20000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&a｢5 ✦｣ "'
+    - '[console] lp user %player_name% permission set rankup.5'
+    - '[console] gens multiplier give %player_name% 0.2'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Rankup &a｢5 ✦｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-0-rankup-5-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 28
+    priority: 3
+    amount: 5
+    display_name: '&fRankUp | &a｢5 ✦｣'
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC10 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$20M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### RANKUP 6 #####
+
+  'prestige-0-rankup-6-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 29
+    priority: 1
+    amount: 6
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.6'
+    display_name: "&fRankUp | &a｢6 ✦｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC12 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$30M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - '&8▪ &fSlots: &#9FFB08+1 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1 &7(75 Uses)'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-0-rankup-6-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 29
+    priority: 2
+    amount: 6
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.5'
+    display_name: '&fRankUp | &a｢6 ✦｣'
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC12 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$30M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - '&8▪ &fSlots: &#9FFB08+1 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1 &7(75 Uses)'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 12'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou have not played enough! %statistic_hours_played%/12
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 30000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/30M
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 30000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&a｢6 ✦｣ "'
+    - '[console] lp user %player_name% permission set rankup.6'
+    - '[console] gens multiplier give %player_name% 0.2'
+    - '[console] gens slots give %player_name% 1'
+    - '[console] gens sellwand %player_name% x1-0_sellwand_75_uses'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Rankup &a｢6 ✦｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-0-rankup-6-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 29
+    priority: 3
+    amount: 6
+    display_name: '&fRankUp | &a｢6 ✦｣'
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC12 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$30M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - '&8▪ &fSlots: &#9FFB08+1 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1 &7(75 Uses)'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### RANKUP 7 #####
+
+  'prestige-0-rankup-7-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 20
+    priority: 1
+    amount: 7
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.7'
+    display_name: "&fRankUp | &a｢7 ✦｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC16 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$50M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-0-rankup-7-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 20
+    priority: 2
+    amount: 7
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.6'
+    display_name: '&fRankUp | &a｢7 ✦｣'
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC16 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$50M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 16'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou have not played enough! %statistic_hours_played%/16
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 50000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/50M
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 50000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&a｢7 ✦｣ "'
+    - '[console] lp user %player_name% permission set rankup.7'
+    - '[console] gens multiplier give %player_name% 0.2'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Rankup &a｢7 ✦｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-0-rankup-7-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 20
+    priority: 3
+    amount: 7
+    display_name: '&fRankUp | &a｢7 ✦｣'
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC16 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$50M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### RANKUP 8 #####
+
+  'prestige-0-rankup-8-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 11
+    priority: 1
+    amount: 8
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.8'
+    display_name: "&fRankUp | &a｢8 ✦｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC20 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$75M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-0-rankup-8-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 11
+    priority: 2
+    amount: 8
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.7'
+    display_name: '&fRankUp | &a｢8 ✦｣'
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC20 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$75M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 20'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou have not played enough! %statistic_hours_played%/20
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 75000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/75M
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 75000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&a｢8 ✦｣ "'
+    - '[console] lp user %player_name% permission set rankup.8'
+    - '[console] gens multiplier give %player_name% 0.2'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Rankup &a｢8 ✦｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-0-rankup-8-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 11
+    priority: 3
+    amount: 8
+    display_name: '&fRankUp | &a｢8 ✦｣'
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC20 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$75M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### RANKUP 9 #####
+
+  'prestige-0-rankup-9-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 2
+    priority: 1
+    amount: 9
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.9'
+    display_name: "&fRankUp | &a｢9 ✦｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC25 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$100M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - '&8▪ &fSlots: &#9FFB08+1 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1 &7(100 Uses)'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-0-rankup-9-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 2
+    priority: 2
+    amount: 9
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.8'
+    display_name: "&fRankUp | &a｢9 ✦｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC25 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$100M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - '&8▪ &fSlots: &#9FFB08+1 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1 &7(100 Uses)'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 25'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou have not played enough! %statistic_hours_played%/25
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 100000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/100M
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 100000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&a｢9 ✦｣ "'
+    - '[console] lp user %player_name% permission set rankup.9'
+    - '[console] gens multiplier give %player_name% 0.2'
+    - '[console] gens slots give %player_name% 1'
+    - '[console] gens sellwand %player_name% x1-0_sellwand_100_uses'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Rankup &a｢9 ✦｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-0-rankup-9-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 2
+    priority: 3
+    amount: 9
+    display_name: "&fRankUp | &a｢9 ✦｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Needed &#946FEC25 Hours ⌚'
+    - '&8▪ &fMoney Needed &#feb801$100M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - '&8▪ &fSlots: &#9FFB08+1 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1 &7(100 Uses)'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### RANKUP 10 #####
+
+  'prestige-0-rankup-10-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 3
+    priority: 1
+    amount: 10
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.10'
+    display_name: "&fRankUp | &a｢10 ✦｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC30 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$150M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-0-rankup-10-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 3
+    priority: 2
+    amount: 10
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.9'
+    display_name: "&fRankUp | &a｢10 ✦｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC30 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$150M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 30'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou have not played enough! %statistic_hours_played%/30
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 150000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/150M
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 150000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&a｢10 ✦｣ "'
+    - '[console] lp user %player_name% permission set rankup.10'
+    - '[console] gens multiplier give %player_name% 0.2'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Rankup &a｢10 ✦｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-0-rankup-10-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 3
+    priority: 3
+    amount: 10
+    display_name: "&fRankUp | &a｢10 ✦｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC30 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$150M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### PRESTIGE 1 RANKUP 10 #####
+
+  'prestige-1-rankup-10-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 4
+    priority: 1
+    amount: 1
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.10'
+    display_name: "&fPrestige | &b｢P1 10 ☆｣"
+    lore:
+    - '&8｢ Player Prestige ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC30 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$500M 💰'
+    - '&8▪ &fWheat Harvested &#ead58410.000 Wheat 🌾'
+    - '&8▪ &fCoal Ore Mined: &#2c2f2a1.000 ⛏'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-1-rankup-10-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 4
+    priority: 2
+    amount: 1
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'rankup.10'
+    display_name: "&fPrestige | &b｢P1 10 ☆｣"
+    lore:
+    - '&8｢ Player Prestige ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Money &#feb801$500M 💰'
+    - '&8▪ &fWheat Harvested &#ead58410.000 Wheat 🌾'
+    - '&8▪ &fCoal Ore Mined: &#2c2f2a1.000 ⛏'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to prestige!'
+    click_requirement:
+      requirements:
+        coal_ore:
+          type: ">="
+          input: "%statistic_mine_block:coal_ore%"
+          output: "1000"
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou need to mine %math_0:_1000-{statistic_mine_block:coal_ore}%
+            more coal.'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        wheat:
+          type: ">="
+          input: "%rivalhoes_wheat%"
+          output: "10000"
+          deny_commands:
+          - '[sound] ENTITY_VILLAGER_NO 1 2'
+          - '[message] &e&lRANKUPS &8» &cYou need to harvest %math_0:_10000-{rivalhoes_wheat}%
+            more wheat.'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 500000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/500M
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 500000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&b｢P1 10 ☆｣ "'
+    - '[console] lp user %player_name% permission set prestige.1_rankup.10'
+    - '[console] gens multiplier give %player_name% 0.2'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Prestige 1 Rankup
+      10 &b｢P1 10 ☆｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-1-rankup-10-next-locked':
+    material: BLUE_STAINED_GLASS_PANE
+    slot: 4
+    priority: 3
+    amount: 1
+    display_name: "&fPrestige | &b｢P1 10 ☆｣"
+    lore:
+    - '&8｢ Player Prestige ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Money &#feb801$500M 💰'
+    - '&8▪ &fWheat Harvested &#ead58410.000 Wheat 🌾'
+    - '&8▪ &fCoal Ore Mined: &#2c2f2a1.000 ⛏'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.2 🧪'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### PRESTIGE 1 RANKUP 11 #####
+
+  'prestige-1-rankup-11-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 13
+    priority: 1
+    amount: 11
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.11'
+    display_name: "&fRankup | &b｢P1 11 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC36 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$250M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-1-rankup-11-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 13
+    priority: 2
+    amount: 11
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.10'
+    display_name: "&fRankup | &b｢P1 11 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC36 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$250M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 36'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou have not played enough! %statistic_hours_played%/36
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 250000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/250M
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 250000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&b｢P1 11 ☆｣ "'
+    - '[console] lp user %player_name% permission set prestige.1_rankup.11'
+    - '[console] gens multiplier give %player_name% 0.3'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Prestige 1 Rankup
+      11 &b｢P1 11 ☆｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-1-rankup-11-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 13
+    priority: 3
+    amount: 11
+    display_name: "&fRankup | &b｢P1 11 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC36 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$250M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### PRESTIGE 1 RANKUP 12 #####
+
+  'prestige-1-rankup-12-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 22
+    priority: 1
+    amount: 12
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.12'
+    display_name: "&fRankup | &b｢P1 12 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC42 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$300M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - '&8▪ &fSlots: &#9FFB08+2 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1.5 &7(25 Uses)'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-1-rankup-12-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 22
+    priority: 2
+    amount: 12
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.11'
+    display_name: "&fRankup | &b｢P1 12 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC42 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$300M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - '&8▪ &fSlots: &#9FFB08+2 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1.5 &7(25 Uses)'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 42'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou have not played enough! %statistic_hours_played%/42
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 300000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/300M
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 300000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&b｢P1 12 ☆｣ "'
+    - '[console] lp user %player_name% permission set prestige.1_rankup.12'
+    - '[console] gens multiplier give %player_name% 0.3'
+    - '[console] gens slots give %player_name% 2'
+    - '[console] gens sellwand %player_name% x1-5_sellwand_25_uses'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Prestige 1 Rankup
+      12 &b｢P1 12 ☆｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-1-rankup-12-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 22
+    priority: 3
+    amount: 12
+    display_name: "&fRankup | &b｢P1 12 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC42 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$300M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - '&8▪ &fSlots: &#9FFB08+2 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1.5 &7(25 Uses)'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### PRESTIGE 1 RANKUP 13 #####
+
+  'prestige-1-rankup-13-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 31
+    priority: 1
+    amount: 13
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.13'
+    display_name: "&fRankup | &b｢P1 13 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC48 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$400M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-1-rankup-13-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 31
+    priority: 2
+    amount: 13
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.12'
+    display_name: "&fRankup | &b｢P1 13 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC48 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$400M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 48'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou have not played enough! %statistic_hours_played%/48
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 400000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/400M
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 400000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&b｢P1 13 ☆｣ "'
+    - '[console] lp user %player_name% permission set prestige.1_rankup.13'
+    - '[console] gens multiplier give %player_name% 0.3'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Prestige 1 Rankup
+      13 &b｢P1 13 ☆｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-1-rankup-13-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 31
+    priority: 3
+    amount: 13
+    display_name: "&fRankup | &b｢P1 13 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC48 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$400M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### PRESTIGE 1 RANKUP 14 #####
+
+  'prestige-1-rankup-14-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 32
+    priority: 1
+    amount: 14
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.14'
+    display_name: "&fRankup | &b｢P1 14 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC54 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$500M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-1-rankup-14-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 32
+    priority: 2
+    amount: 14
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.13'
+    display_name: "&fRankup | &b｢P1 14 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC54 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$500M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 54'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou have not played enough! %statistic_hours_played%/54
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 500000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/500M
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 500000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&b｢P1 14 ☆｣ "'
+    - '[console] lp user %player_name% permission set prestige.1_rankup.14'
+    - '[console] gens multiplier give %player_name% 0.3'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Prestige 1 Rankup
+      14 &b｢P1 14 ☆｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-1-rankup-14-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 32
+    priority: 3
+    amount: 14
+    display_name: "&fRankup | &b｢P1 14 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC54 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$500M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### PRESTIGE 1 RANKUP 15 #####
+
+  'prestige-1-rankup-15-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 33
+    priority: 1
+    amount: 15
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.15'
+    display_name: "&fRankup | &b｢P1 15 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC60 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$750M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - '&8▪ &fSlots: &#9FFB08+2 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1.5 &7(50 Uses)'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-1-rankup-15-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 33
+    priority: 2
+    amount: 15
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.14'
+    display_name: "&fRankup | &b｢P1 15 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC60 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$750M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - '&8▪ &fSlots: &#9FFB08+2 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1.5 &7(50 Uses)'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 60'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou have not played enough! %statistic_hours_played%/60
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 750000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/750M
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 750000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&b｢P1 15 ☆｣ "'
+    - '[console] lp user %player_name% permission set prestige.1_rankup.15'
+    - '[console] gens multiplier give %player_name% 0.3'
+    - '[console] gens slots give %player_name% 2'
+    - '[console] gens sellwand %player_name% x1-5_sellwand_50_uses'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Prestige 1 Rankup
+      15 &b｢P1 15 ☆｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-1-rankup-15-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 33
+    priority: 3
+    amount: 15
+    display_name: "&fRankup | &b｢P1 15 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC60 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$750M 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - '&8▪ &fSlots: &#9FFB08+2 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1.5 &7(50 Uses)'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### PRESTIGE 1 RANKUP 16 #####
+
+  'prestige-1-rankup-16-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 24
+    priority: 1
+    amount: 16
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.16'
+    display_name: "&fRankup | &b｢P1 16 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC66 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$1B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-1-rankup-16-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 24
+    priority: 2
+    amount: 16
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.15'
+    display_name: "&fRankup | &b｢P1 16 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC66 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$1B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 66'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou have not played enough! %statistic_hours_played%/66
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 1000000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/1B
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 1000000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&b｢P1 16 ☆｣ "'
+    - '[console] lp user %player_name% permission set prestige.1_rankup.16'
+    - '[console] gens multiplier give %player_name% 0.3'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Prestige 1 Rankup
+      16 &b｢P1 16 ☆｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-1-rankup-16-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 24
+    priority: 3
+    amount: 16
+    display_name: "&fRankup | &b｢P1 16 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fRequired Playtime &#946FEC66 Hours ⌚'
+    - '&8▪ &fRequired Money &#feb801$1B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### PRESTIGE 1 RANKUP 17 #####
+
+  'prestige-1-rankup-17-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 15
+    priority: 1
+    amount: 17
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.17'
+    display_name: "&fRankup | &b｢P1 17 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC72 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$1.5B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-1-rankup-17-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 15
+    priority: 2
+    amount: 17
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.16'
+    display_name: "&fRankup | &b｢P1 17 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC72 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$1.5B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 72'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou haven''t played enough! %statistic_hours_played%/72
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 1500000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/1.5B
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 1500000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&b｢P1 17 ☆｣ "'
+    - '[console] lp user %player_name% permission set prestige.1_rankup.17'
+    - '[console] gens multiplier give %player_name% 0.3'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Prestige 1 Rankup
+      17 &b｢P1 17 ☆｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-1-rankup-17-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 15
+    priority: 3
+    amount: 17
+    display_name: "&fRankup | &b｢P1 17 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC72 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$1.5B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### PRESTIGE 1 RANKUP 18 #####
+
+  'prestige-1-rankup-18-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 6
+    priority: 1
+    amount: 18
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.18'
+    display_name: "&fRankup | &b｢P1 18 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC80 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$2B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - '&8▪ &fSlots: &#9FFB08+2 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1.5 &7(75 Uses)'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-1-rankup-18-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 6
+    priority: 2
+    amount: 18
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.17'
+    display_name: "&fRankup | &b｢P1 18 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC80 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$2B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - '&8▪ &fSlots: &#9FFB08+2 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1.5 &7(75 Uses)'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 80'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou haven''t played enough! %statistic_hours_played%/80
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 2000000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/2B
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 2000000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&b｢P1 18 ☆｣ "'
+    - '[console] lp user %player_name% permission set prestige.1_rankup.18'
+    - '[console] gens multiplier give %player_name% 0.3'
+    - '[console] gens slots give %player_name% 2'
+    - '[console] gens sellwand %player_name% x1-5_sellwand_75_uses'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Prestige 1 Rankup
+      18 &b｢P1 18 ☆｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-1-rankup-18-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 6
+    priority: 3
+    amount: 18
+    display_name: "&fRankup | &b｢P1 18 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC80 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$2B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - '&8▪ &fSlots: &#9FFB08+2 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1.5 &7(75 Uses)'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### PRESTIGE 1 RANKUP 19 #####
+
+  'prestige-1-rankup-19-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 7
+    priority: 1
+    amount: 19
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.19'
+    display_name: "&fRankup | &b｢P1 19 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC88 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$3.5B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-1-rankup-19-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 7
+    priority: 2
+    amount: 19
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.18'
+    display_name: "&fRankup | &b｢P1 19 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC88 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$3.5B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 88'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou haven''t played enough! %statistic_hours_played%/88
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 3500000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/3.5B
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 3500000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&b｢P1 19 ☆｣ "'
+    - '[console] lp user %player_name% permission set prestige.1_rankup.19'
+    - '[console] gens multiplier give %player_name% 0.3'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Prestige 1 Rankup
+      19 &b｢P1 19 ☆｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-1-rankup-19-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 7
+    priority: 3
+    amount: 19
+    display_name: "&fRankup | &b｢P1 19 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC88 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$3.5B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### PRESTIGE 1 RANKUP 20 #####
+
+  'prestige-1-rankup-20-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 8
+    priority: 1
+    amount: 20
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.20'
+    display_name: "&fRankup | &b｢P1 20 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC96 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$5B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-1-rankup-20-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 8
+    priority: 2
+    amount: 20
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.19'
+    display_name: "&fRankup | &b｢P1 20 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC96 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$5B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 96'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou haven''t played enough! %statistic_hours_played%/96
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 5000000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/5B
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 5000000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&b｢P1 20 ☆｣ "'
+    - '[console] lp user %player_name% permission set prestige.1_rankup.20'
+    - '[console] gens multiplier give %player_name% 0.3'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Prestige 1 Rankup
+      20 &b｢P1 20 ☆｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-1-rankup-20-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 8
+    priority: 3
+    amount: 20
+    display_name: "&fRankup | &b｢P1 20 ☆｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC96 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$5B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### PRESTIGE 2 RANKUP 20 #####
+
+  'prestige-2-rankup-20-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 17
+    priority: 1
+    amount: 1
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.2_rankup.20'
+    display_name: "&fPrestige | &d｢P2 20 ✭｣"
+    lore:
+    - '&8｢ Player Prestige ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fMoney Required &#feb801$20B 💰'
+    - '&8▪ &fCarrots Harvested &#fc8c0925,000 Carrots 🐇'
+    - '&8▪ &fIron Ore Mined: &#9DA3A42,000 ⛏'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-2-rankup-20-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 17
+    priority: 2
+    amount: 1
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.1_rankup.20'
+    display_name: "&fPrestige | &d｢P2 20 ✭｣"
+    lore:
+    - '&8｢ Player Prestige ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fMoney Required &#feb801$20B 💰'
+    - '&8▪ &fCarrots Harvested &#fc8c0925,000 Carrots 🐇'
+    - '&8▪ &fIron Ore Mined: &#9DA3A42,000 ⛏'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        iron_ore:
+          type: ">="
+          input: "%statistic_mine_block:iron_ore%"
+          output: "2000"
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou need to mine %math_0:_2000-{statistic_mine_block:iron_ore}%
+            more iron.'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        carrot:
+          type: ">="
+          input: "%rivalhoes_carrot%"
+          output: "25000"
+          deny_commands:
+          - '[sound] ENTITY_VILLAGER_NO 1 2'
+          - '[message] &e&lRANKUPS &8» &cYou need to harvest %math_0:_25000-{rivalhoes_carrot}%
+            more carrots.'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 20000000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/20B
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 20000000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&d｢P2 20 ✭｣ "'
+    - '[console] lp user %player_name% permission set prestige.2_rankup.20'
+    - '[console] gens multiplier give %player_name% 0.3'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Prestige 2 Rankup
+      20 &d｢P2 20 ✭｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-2-rankup-20-next-locked':
+    material: BLUE_STAINED_GLASS_PANE
+    slot: 17
+    priority: 3
+    amount: 1
+    display_name: "&fPrestige | &d｢P2 20 ✭｣"
+    lore:
+    - '&8｢ Player Prestige ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fMoney Required &#feb801$20B 💰'
+    - '&8▪ &fCarrots Harvested &#fc8c0925,000 Carrots 🐇'
+    - '&8▪ &fIron Ore Mined: &#9DA3A42,000 ⛏'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.3 🧪'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### PRESTIGE 2 RANKUP 21 #####
+
+  'prestige-2-rankup-21-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 26
+    priority: 1
+    amount: 21
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.2_rankup.21'
+    display_name: "&fRankup | &d｢P2 21 ✭｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC104 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$10B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.4 🧪'
+    - '&8▪ &fSlots: &#9FFB08+3 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1.5 &7(100 Uses)'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-2-rankup-21-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 26
+    priority: 2
+    amount: 21
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.2_rankup.20'
+    display_name: "&fRankup | &d｢P2 21 ✭｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC104 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$10B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.4 🧪'
+    - '&8▪ &fSlots: &#9FFB08+3 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1.5 &7(100 Uses)'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 104'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou haven''t played enough! %statistic_hours_played%/104
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 10000000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/10B
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 10000000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&d｢P2 21 ✭｣ "'
+    - '[console] lp user %player_name% permission set prestige.2_rankup.21'
+    - '[console] gens multiplier give %player_name% 0.4'
+    - '[console] gens slots give %player_name% 3'
+    - '[console] gens sellwand %player_name% x1-5_sellwand_100_uses'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Prestige 2 Rankup
+      21 &d｢P2 21 ✭｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-2-rankup-21-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 26
+    priority: 3
+    amount: 21
+    display_name: "&fRankup | &d｢P2 21 ✭｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC104 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$10B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.4 🧪'
+    - '&8▪ &fSlots: &#9FFB08+3 ⛺'
+    - '&8▪ &fSellWand: &#FFCC00x1.5 &7(100 Uses)'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+  ##### PRESTIGE 2 RANKUP 22 #####
+
+  'prestige-2-rankup-22-unlocked':
+    material: LIME_STAINED_GLASS_PANE
+    slot: 35
+    priority: 1
+    amount: 22
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.2_rankup.22'
+    display_name: "&fRankup | &d｢P2 22 ✭｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC112 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$20B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.4 🧪'
+    - ''
+    - '&#9CFF8C❈ Go for the next rankup :D!'
+    click_commands:
+    - '[refresh]'
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+  'prestige-2-rankup-22-next':
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 35
+    priority: 2
+    amount: 22
+    enchantments:
+    - 'DURABILITY;1'
+    hide_enchantments: true
+    view_requirement:
+      requirements:
+        Pex:
+          type: 'has permission'
+          permission: 'prestige.2_rankup.21'
+    display_name: "&fRankup | &d｢P2 22 ✭｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC112 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$20B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.4 🧪'
+    - ''
+    - '&#83E5D1➥ &nClick&r &#83E5D1to rankup!'
+    click_requirement:
+      requirements:
+        playtime:
+          type: 'javascript'
+          expression: '%statistic_hours_played% >= 112'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou haven''t played enough! %statistic_hours_played%/112
+            hours ⌚'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+        balance:
+          type: 'javascript'
+          expression: '%vault_eco_balance% >= 20000000000'
+          deny_commands:
+          - '[message] &e&lRANKUPS &8» &cYou don''t have enough money! %vault_eco_balance_commas%/20B
+            💰'
+          - '[sound] BLOCK_NOTE_BLOCK_BASS'
+          - '[close]'
+    click_commands:
+    # Remove
+    - '[console] eco take %player_name% 20000000000'
+    # Add
+    - '[console] lp user %player_name% meta setsuffix "&d｢P2 22 ✭｣ "'
+    - '[console] lp user %player_name% permission set prestige.2_rankup.22'
+    - '[console] gens multiplier give %player_name% 0.4'
+    # Messages
+    - '[message] &e&lRANKUPS &8» &fCongratulations! You are now Prestige 2 Rankup
+      22 &d｢P2 22 ✭｣'
+    # Sounds
+    - '[sound] ENTITY_PLAYER_LEVEL_UP'
+    # Extra
+    - '[refresh]'
+  'prestige-2-rankup-22-next-locked':
+    material: RED_STAINED_GLASS_PANE
+    slot: 35
+    priority: 3
+    amount: 22
+    display_name: "&fRankup | &d｢P2 22 ✭｣"
+    lore:
+    - '&8｢ Player RankUps ｣'
+    - ''
+    - '&e✰ Requirements'
+    - '&8▪ &fTime Played Required &#946FEC112 Hours ⌚'
+    - '&8▪ &fMoney Required &#feb801$20B 💰'
+    - ''
+    - '&a✔ Rewards'
+    - '&8▪ &fBoost: &#05f800x0.4 🧪'
+    - ''
+    - '&#ff3232➥ Upgrade previous rankups'
+    click_commands:
+    - '[sound] BLOCK_NOTE_BLOCK_COW_BELL 1 2'
+    - '[refresh]'
+
+### GO TO /plugins/DeluxeMenus/gui_menus/RankUp/rankup_2.yml :p

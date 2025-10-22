@@ -1,0 +1,3089 @@
+menu_title: '&8         Menú delle Missioni (1/2)'
+open_command:
+- q
+- quest
+- quests
+- mision
+- misions
+- misiones
+size: 54
+register_command: false
+items:
+  'decoration':
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+    - 0-9
+    - 17
+    - 18
+    - 26
+    - 27
+    - 35
+    - 36
+    - 44
+    - 45
+    - 46
+    - 47
+    - 48
+    - 51
+    - 52
+    - 53
+    display_name: '&f'
+  'info':
+    material: head-%player_name%
+    slot: 49
+    priority: 1
+    display_name: "&#FF3333&lIndietro"
+    lore:
+    - '&7&o(( Ritorna al'
+    - '&7&omenù principale ))'
+    - ''
+    - '&#FF3333&l➥ &#FF3333Clicca per tornare'
+    click_commands:
+    - '[openguimenu] main_menu'
+  'next-pag':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjFkMGY4MmEyYTRjZGQ4NWY3OWY0ZDlkOTc5OGY5YzNhNWJjY2JlOWM3ZjJlMjdjNWZjODM2NjUxYThmM2Y0NSJ9fX0=
+    slot: 50
+    priority: 1
+    display_name: '&#5BFB1A ➡ &#5BFB1APagina Successiva'
+    click_commands:
+    - "[openguimenu] quests_2"
+
+#+-----------------------------------------------------------[QUESTS LEVELS]----------------------------------------------------------------------------+#   
+#####################
+# Kills 1           #
+#####################
+  'kills-1-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 10
+    priority: 1
+    display_name: '&#FB3838☂ &fUccisioni Livello 1'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.kills.1"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB383810 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+10.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+5.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'kills-1-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 10
+    priority: 2
+    display_name: '&#FB3838☂ &fUccisioni Livello 1'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB383810 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+10.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+5.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_player_kills%"
+          output: "10"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.kills.1"
+    - "[console] eco give %player_name% 10000"
+    - "[console] essence give %player_name% 5000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      1 di Uccisioni e hai ricevuto &#feb801+10.000 &8- &#ADF3FD5.000 essienze"
+    - "[close]"
+  'kills-1-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 10
+    priority: 3
+    display_name: '&#FB3838☂ &fUccisioni Livello 1'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB383810 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+10.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+5.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_player_kills%"
+          output: "10"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fHai bisogno di fare &#cf4242%math_0:_10-{statistic_player_kills}%
+            &fussisioni per questa missione!"
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Kills 2           #
+#####################
+  'kills-2-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 11
+    priority: 1
+    display_name: '&#FB3838☂ &fUccisioni Livello 2'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.kills.2"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB383820 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+20.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+10.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'kills-2-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 11
+    priority: 2
+    display_name: '&#FB3838☂ &fUccisioni Livello 2'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB383820 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+20.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+10.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_player_kills%"
+          output: "20"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.kills.2"
+    - "[console] eco give %player_name% 20000"
+    - "[console] essence give %player_name% 10000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      2 di Uccisioni e hai ricevuto &#feb801+20.000 &8- &#ADF3FD10.000 essienze"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.kills.1"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'kills-2-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 11
+    priority: 3
+    display_name: '&#FB3838☂ &fUccisioni Livello 2'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB383820 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+20.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+10.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_player_kills%"
+          output: "20"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fHai bisogno di fare &#cf4242%math_0:_20-{statistic_player_kills}%
+            &fussisioni per questa missione!"
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Kills 3           #
+#####################
+  'kills-3-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 12
+    priority: 1
+    display_name: '&#FB3838☂ &fUccisioni Livello 3'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.kills.3"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB383850 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+50.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+25.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'kills-3-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 12
+    priority: 2
+    display_name: '&#FB3838☂ &fUccisioni Livello 3'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB383850 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+50.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+25.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_player_kills%"
+          output: "50"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.kills.3"
+    - "[console] eco give %player_name% 50000"
+    - "[console] essence give %player_name% 25000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      3 di Uccisioni e hai ricevuto &#feb801+50.000 &8- &#ADF3FD25.000 essienze"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.kills.2"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'kills-3-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 12
+    priority: 3
+    display_name: '&#FB3838☂ &fUccisioni Livello 3'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB383850 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+50.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+25.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_player_kills%"
+          output: "50"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fHai bisogno di fare &#cf4242%math_0:_50-{statistic_player_kills}%
+            &fussisioni per questa missione!"
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Kills 4           #
+#####################
+  'kills-4-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 13
+    priority: 1
+    display_name: '&#FB3838☂ &fUccisioni Livello 4'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.kills.4"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB3838100 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+200.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+50.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'kills-4-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 13
+    priority: 2
+    display_name: '&#FB3838☂ &fUccisioni Livello 4'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB3838100 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+200.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+50.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_player_kills%"
+          output: "100"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.kills.4"
+    - "[console] eco give %player_name% 200000"
+    - "[console] essence give %player_name% 50000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      4 di Uccisioni e hai ricevuto &#feb801+200.000 &8- &#ADF3FD50.000 essienze"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.kills.3"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'kills-4-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 13
+    priority: 3
+    display_name: '&#FB3838☂ &fUccisioni Livello 4'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB3838100 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+200.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+50.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_player_kills%"
+          output: "100"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fHai bisogno di fare &#cf4242%math_0:_100-{statistic_player_kills}%
+            &fussisioni per questa missione!"
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Kills 5           #
+#####################
+  'kills-5-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 14
+    priority: 1
+    display_name: '&#FB3838☂ &fUccisioni Livello 5'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.kills.5"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB3838150 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+400.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+100.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'kills-5-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 14
+    priority: 2
+    display_name: '&#FB3838☂ &fUccisioni Livello 5'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB3838150 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+400.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+100.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_player_kills%"
+          output: "150"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.kills.5"
+    - "[console] eco give %player_name% 400000"
+    - "[console] essence give %player_name% 100000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      10 di Uccisioni e hai ricevuto &#feb801+400.000 &8- &#ADF3FD100.000 essienze"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.kills.4"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'kills-5-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 14
+    priority: 3
+    display_name: '&#FB3838☂ &fUccisioni Livello 5'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB3838150 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+400.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+100.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_player_kills%"
+          output: "150"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fHai bisogno di fare &#cf4242%math_0:_150-{statistic_player_kills}%
+            &fussisioni per questa missione!"
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Kills 6           #
+#####################
+  'kills-6-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 15
+    priority: 1
+    display_name: '&#FB3838☂ &fUccisioni Livello 6'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.kills.6"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB3838200 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+650.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+200.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'kills-6-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 15
+    priority: 2
+    display_name: '&#FB3838☂ &fUccisioni Livello 6'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB3838200 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+650.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+200.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_player_kills%"
+          output: "200"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.kills.6"
+    - "[console] eco give %player_name% 650000"
+    - "[console] essence give %player_name% 200000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      10 di Uccisioni e hai ricevuto &#feb801+650.000 &8- &#ADF3FD200.000 essienze"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.kills.5"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'kills-6-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 15
+    priority: 3
+    display_name: '&#FB3838☂ &fUccisioni Livello 6'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB3838200 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+650.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+200.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_player_kills%"
+          output: "200"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fHai bisogno di fare &#cf4242%math_0:_200-{statistic_player_kills}%
+            &fussisioni per questa missione!"
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Kills 7           #
+#####################
+  'kills-7-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 16
+    priority: 1
+    display_name: '&#FB3838☂ &fUccisioni Livello 7'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.kills.7"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB3838250 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+900.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+300.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'kills-7-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 16
+    priority: 2
+    display_name: '&#FB3838☂ &fUccisioni Livello 7'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB3838250 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+900.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+300.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_player_kills%"
+          output: "250"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.kills.7"
+    - "[console] eco give %player_name% 900000"
+    - "[console] essence give %player_name% 300000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      10 di Uccisioni e hai ricevuto &#feb801+900.000 &8- &#ADF3FD300.000 essienze"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.kills.6"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'kills-7-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMmYzM2ViMTgwZjA0MzQ5MTZkYzVkMmJiMzI2YTZlYTIyZmM5YmJmOTg4YmMzMWEyNDFmZDQyNzgwMjMifX19
+    slot: 16
+    priority: 3
+    display_name: '&#FB3838☂ &fUccisioni Livello 2'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRegistra: &#FB3838250 uccisioni ⚓"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+900.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+300.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_player_kills%"
+          output: "250"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fHai bisogno di fare &#cf4242%math_0:_250-{statistic_player_kills}%
+            &fussisioni per questa missione!"
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Mined Blocks 1    #
+#####################
+  'mined-1-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmU3OGQ4ZWI1ODgzYTExMDY2N2I1MWVlMjBhM2IyMWQ1MmQwODlhMGQ0YzkxYmUzY2I3ODZjMzE4MjhhMjA5NyJ9fX0=
+    slot: 19
+    priority: 1
+    display_name: '&#41FBCE☂ &fMinatore Livello 1'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mined.1"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE1.000 Minerali di Carbone ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+10.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+5.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'mined-1-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmU3OGQ4ZWI1ODgzYTExMDY2N2I1MWVlMjBhM2IyMWQ1MmQwODlhMGQ0YzkxYmUzY2I3ODZjMzE4MjhhMjA5NyJ9fX0=
+    slot: 19
+    priority: 2
+    display_name: '&#41FBCE☂ &fMinatore Livello 1'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE1.000 Minerali di Carbone ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+10.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+5.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:coal_ore%"
+          output: "1000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.mined.1"
+    - "[console] eco give %player_name% 10000"
+    - "[console] essence give %player_name% 5000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      1 di Estrazione e hai ricevuto &#feb801+10.000 &8- &#ADF3FD5.000 essienze"
+    - "[close]"
+  'mined-1-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmU3OGQ4ZWI1ODgzYTExMDY2N2I1MWVlMjBhM2IyMWQ1MmQwODlhMGQ0YzkxYmUzY2I3ODZjMzE4MjhhMjA5NyJ9fX0=
+    slot: 19
+    priority: 3
+    display_name: '&#41FBCE☂ &fMinatore Livello 1'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE1.000 Minerali di Carbone ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+10.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+5.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:coal_ore%"
+          output: "1000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fDevi rompere &#cf4242%math_0:_1000-{statistic_mine_block:coal_ore}%
+            &fblocchi in più."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Mined Blocks 2    #
+#####################
+  'mined-2-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjRjNWY4ZGE1OWI4MzA1MDMwYTNhYWVmYTRjYzY3YmVlOTVmN2JmZGI1MjkzYTgzYjdjZmRjMzJkZTAyMDQxYiJ9fX0=
+    slot: 20
+    priority: 1
+    display_name: '&#41FBCE☂ &fMinatore Livello 2'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mined.2"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE2.000 Minerali di Ferro ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+20.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+10.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'mined-2-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjRjNWY4ZGE1OWI4MzA1MDMwYTNhYWVmYTRjYzY3YmVlOTVmN2JmZGI1MjkzYTgzYjdjZmRjMzJkZTAyMDQxYiJ9fX0=
+    slot: 20
+    priority: 2
+    display_name: '&#41FBCE☂ &fMinatore Livello 2'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE2.000 Minerali di Ferro ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+20.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+10.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:iron_ore%"
+          output: "2000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.mined.2"
+    - "[console] eco give %player_name% 20000"
+    - "[console] essence give %player_name% 10000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      2 di Estrazione e hai ricevuto &#feb801+20.000 &8- &#ADF3FD10.000 essenze"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mined.1"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'mined-2-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjRjNWY4ZGE1OWI4MzA1MDMwYTNhYWVmYTRjYzY3YmVlOTVmN2JmZGI1MjkzYTgzYjdjZmRjMzJkZTAyMDQxYiJ9fX0=
+    slot: 20
+    priority: 3
+    display_name: '&#41FBCE☂ &fMinatore Livello 2'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE2.000 Minerali di Ferro ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+20.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+10.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:iron_ore%"
+          output: "2000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fDevi rompere &#cf4242%math_0:_2000-{statistic_mine_block:iron_ore}%
+            &fblocchi in più."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Mined Blocks 3    #
+#####################
+  'mined-3-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTEwMDFiNDI1MTExYmZlMGFjZmY3MTBhOGI0MWVhOTVlM2I5MzZhODVlNWJiNjUxNzE2MGJhYjU4N2U4ODcwZiJ9fX0=
+    slot: 21
+    priority: 1
+    display_name: '&#41FBCE☂ &fMinatore Livello 3'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mined.3"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE3.000 Minerali di Lapislazzuli ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+50.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+25.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'mined-3-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTEwMDFiNDI1MTExYmZlMGFjZmY3MTBhOGI0MWVhOTVlM2I5MzZhODVlNWJiNjUxNzE2MGJhYjU4N2U4ODcwZiJ9fX0=
+    slot: 21
+    priority: 2
+    display_name: '&#41FBCE☂ &fMinatore Livello 3'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE3.000 Minerali di Lapislazzuli ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+50.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+25.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:lapis_ore%"
+          output: "3000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.mined.3"
+    - "[console] eco give %player_name% 50000"
+    - "[console] essence give %player_name% 25000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      3 di Estrazione e hai ricevuto &#feb801+50.000 &8- &#ADF3FD25.000 essenze"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mined.2"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'mined-3-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTEwMDFiNDI1MTExYmZlMGFjZmY3MTBhOGI0MWVhOTVlM2I5MzZhODVlNWJiNjUxNzE2MGJhYjU4N2U4ODcwZiJ9fX0=
+    slot: 21
+    priority: 3
+    display_name: '&#41FBCE☂ &fMinatore Livello 3'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE3.000 Minerali di Lapislazzuli ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+50.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+25.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:lapis_ore%"
+          output: "3000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fDevi rompere &#cf4242%math_0:_3000-{statistic_mine_block:lapis_ore}%
+            &fblocchi in più."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Mined Blocks 4    #
+#####################
+  'mined-4-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODViNGFiZDRmMDdiNjg5NDYwN2NiZDg3MDg2OGY2N2UwMjVjN2ZiNTUyYTFhNTdmNTZmNzdjMDQ0Y2NhNDFjZSJ9fX0=
+    slot: 22
+    priority: 1
+    display_name: '&#41FBCE☂ &fMinatore Livello 4'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mined.4"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE4.000 Minerali d'Oro ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+200.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+50.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'mined-4-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODViNGFiZDRmMDdiNjg5NDYwN2NiZDg3MDg2OGY2N2UwMjVjN2ZiNTUyYTFhNTdmNTZmNzdjMDQ0Y2NhNDFjZSJ9fX0=
+    slot: 22
+    priority: 2
+    display_name: '&#41FBCE☂ &fMinatore Livello 4'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE4.000 Minerali d'Oro ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+200.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+50.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:gold_ore%"
+          output: "4000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.mined.4"
+    - "[console] eco give %player_name% 200000"
+    - "[console] essence give %player_name% 50000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      4 di Estrazione e hai ricevuto &#feb801+200.000 &8- &#ADF3FD50.000 essenze"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mined.3"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'mined-4-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODViNGFiZDRmMDdiNjg5NDYwN2NiZDg3MDg2OGY2N2UwMjVjN2ZiNTUyYTFhNTdmNTZmNzdjMDQ0Y2NhNDFjZSJ9fX0=
+    slot: 22
+    priority: 3
+    display_name: '&#41FBCE☂ &fMinatore Livello 4'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE4.000 Minerali d'Oro ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+200.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+50.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:gold_ore%"
+          output: "4000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fDevi rompere &#cf4242%math_0:_4000-{statistic_mine_block:gold_ore}%
+            &fblocchi in più."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Mined Blocks 5    #
+#####################
+  'mined-5-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjMyY2NmNzgxNDUzOWE2MWY4YmZjMTViY2YxMTFhMzlhZDhhZTE2M2MzNmU0NGI2Mzc5NDE1NTU2NDc1ZDcyYSJ9fX0=
+    slot: 23
+    priority: 1
+    display_name: '&#41FBCE☂ &fMinatore Livello 5'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mined.5"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE5.000 Minerali di Redstone ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+400.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+100.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'mined-5-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjMyY2NmNzgxNDUzOWE2MWY4YmZjMTViY2YxMTFhMzlhZDhhZTE2M2MzNmU0NGI2Mzc5NDE1NTU2NDc1ZDcyYSJ9fX0=
+    slot: 23
+    priority: 2
+    display_name: '&#41FBCE☂ &fMinatore Livello 5'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE5.000 Minerali di Redstone ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+400.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+100.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:redstone_ore%"
+          output: "5000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.mined.5"
+    - "[console] eco give %player_name% 400000"
+    - "[console] essence give %player_name% 100000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      5 di Estrazione e hai ricevuto &#feb801+400.000 &8- &#ADF3FD100.000 essenze"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mined.4"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'mined-5-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjMyY2NmNzgxNDUzOWE2MWY4YmZjMTViY2YxMTFhMzlhZDhhZTE2M2MzNmU0NGI2Mzc5NDE1NTU2NDc1ZDcyYSJ9fX0=
+    slot: 23
+    priority: 3
+    display_name: '&#41FBCE☂ &fMinatore Livello 5'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE5.000 Minerali di Redstone ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+400.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+100.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:redstone_ore%"
+          output: "5000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fDevi rompere &#cf4242%math_0:_5000-{statistic_mine_block:redstone_ore}%
+            &fblocchi in più."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Mined Blocks 6    #
+#####################
+  'mined-6-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWVhOThlOGQ2YzU2NDJlMzJhYjU2OWRhYmY5M2NkNjkwNDYwYzQ5NDc3Y2E5YjlkYmY3MjU5YjM3OTUxZjJhZCJ9fX0
+    slot: 24
+    priority: 1
+    display_name: '&#41FBCE☂ &fMinatore Livello 6'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mined.6"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE6.000 Minerali di Diamante ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+650.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+200.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'mined-6-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWVhOThlOGQ2YzU2NDJlMzJhYjU2OWRhYmY5M2NkNjkwNDYwYzQ5NDc3Y2E5YjlkYmY3MjU5YjM3OTUxZjJhZCJ9fX0
+    slot: 24
+    priority: 2
+    display_name: '&#41FBCE☂ &fMinatore Livello 6'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE6.000 Minerali di Diamante ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+650.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+200.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:diamond_ore%"
+          output: "6000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.mined.6"
+    - "[console] eco give %player_name% 650000"
+    - "[console] essence give %player_name% 200000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      6 di Estrazione e hai ricevuto &#feb801+650.000 &8- &#ADF3FD200.000 essenze"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mined.5"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'mined-6-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWVhOThlOGQ2YzU2NDJlMzJhYjU2OWRhYmY5M2NkNjkwNDYwYzQ5NDc3Y2E5YjlkYmY3MjU5YjM3OTUxZjJhZCJ9fX0
+    slot: 24
+    priority: 3
+    display_name: '&#41FBCE☂ &fMinatore Livello 6'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE6.000 Minerali di Diamante ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+650.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+200.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:diamond_ore%"
+          output: "6000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fDevi rompere &#cf4242%math_0:_6000-{statistic_mine_block:diamond_ore}%
+            &fblocchi in più."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Mined Blocks 7    #
+#####################
+  'mined-7-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGRhMjI0NmZjMTc2NTlkOTBlMmU4MjkxMGZjZjU3MGYyN2NjNDUyYjZjZjE5YzljZWFiNmJkZTE4MzQxM2Y4YyJ9fX0=
+    slot: 25
+    priority: 1
+    display_name: '&#41FBCE☂ &fMinatore Livello 7'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mined.7"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE6.500 Minerali di Smeraldo ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+900.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+300.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'mined-7-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGRhMjI0NmZjMTc2NTlkOTBlMmU4MjkxMGZjZjU3MGYyN2NjNDUyYjZjZjE5YzljZWFiNmJkZTE4MzQxM2Y4YyJ9fX0=
+    slot: 25
+    priority: 2
+    display_name: '&#41FBCE☂ &fMinatore Livello 7'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE6.500 Minerali di Smeraldo ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+900.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+300.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:emerald_ore%"
+          output: "6500"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.mined.7"
+    - "[console] eco give %player_name% 900000"
+    - "[console] essence give %player_name% 300000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      7 di Estrazione e hai ricevuto &#feb801+900.000 &8- &#ADF3FD300.000 essenze"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mined.6"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'mined-7-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGRhMjI0NmZjMTc2NTlkOTBlMmU4MjkxMGZjZjU3MGYyN2NjNDUyYjZjZjE5YzljZWFiNmJkZTE4MzQxM2Y4YyJ9fX0=
+    slot: 25
+    priority: 3
+    display_name: '&#41FBCE☂ &fMinatore Livello 7'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE6.500 Minerali di Smeraldo ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+900.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+300.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:emerald_ore%"
+          output: "6500"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fDevi rompere &#cf4242%math_0:_6000-{statistic_mine_block:emerald_ore}%
+            &fblocchi in più."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Mined Deepslate 1 #
+#####################
+  'mined-deepslate-1-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWNmOTQ3ODRkN2MxZGM2YTkzYjQxM2JlNTJiNTRmYTc3YjdhNzI1ODY3NWU4NzAyMWIzNGVkMmJmNzUxZGIyMSJ9fX0=
+    slot: 28
+    priority: 1
+    display_name: '&#F9FB97☂ &fMinatore Deepslate Livello 1'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mining.deepslate.1"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE1.000 Minerali di Carbone Deepslate ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+10.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+5.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'mined-deepslate-1-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWNmOTQ3ODRkN2MxZGM2YTkzYjQxM2JlNTJiNTRmYTc3YjdhNzI1ODY3NWU4NzAyMWIzNGVkMmJmNzUxZGIyMSJ9fX0=
+    slot: 28
+    priority: 2
+    display_name: '&#F9FB97☂ &fMinatore Deepslate Livello 1'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE1.000 Minerali di Carbone Deepslate ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+10.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+5.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:deepslate_coal_ore%"
+          output: "2000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.mining.deepslate.1"
+    - "[console] eco give %player_name% 10000"
+    - "[console] essence give %player_name% 5000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      1 di Estrazione Deepslate e hai ricevuto &#feb801+10.000 &8- &#ADF3FD5.000 essenze"
+    - "[close]"
+  'mined-deepslate-1-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWNmOTQ3ODRkN2MxZGM2YTkzYjQxM2JlNTJiNTRmYTc3YjdhNzI1ODY3NWU4NzAyMWIzNGVkMmJmNzUxZGIyMSJ9fX0=
+    slot: 28
+    priority: 3
+    display_name: '&#F9FB97☂ &fMinatore Deepslate Livello 1'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE1.000 Minerali di Carbone Deepslate ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+10.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+5.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:deepslate_coal_ore%"
+          output: "2000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fDevi rompere &#cf4242%math_0:_1000-{statistic_mine_block:deepslate_coal_ore}%
+            &fblocchi in più."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Mined Deepslate 2 #
+#####################
+  'mined-deepslate-2-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmUxMTNhMzEyODhlNGFjZGU0ZTdkZDc0MDMxYjY0NDdjYzZmZDBiNjE0YTc4YTE0YjNhMzMzNGE0ZTk2ZTU1NSJ9fX0=
+    slot: 29
+    priority: 1
+    display_name: '&#F9FB97☂ &fEstrazione Deepslate Livello 2'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mining.deepslate.2"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE2.000 Minerali di Ferro Deepslate ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+20.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+10.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'mined-deepslate-2-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmUxMTNhMzEyODhlNGFjZGU0ZTdkZDc0MDMxYjY0NDdjYzZmZDBiNjE0YTc4YTE0YjNhMzMzNGE0ZTk2ZTU1NSJ9fX0=
+    slot: 29
+    priority: 2
+    display_name: '&#F9FB97☂ &fEstrazione Deepslate Livello 2'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE2.000 Minerali di Ferro Deepslate ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+20.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+10.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:deepslate_iron_ore%"
+          output: "2000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.mining.deepslate.2"
+    - "[console] eco give %player_name% 20000"
+    - "[console] essence give %player_name% 10000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      2 di Estrazione Deepslate e hai ricevuto &#feb801+20.000 &8- &#ADF3FD10.000
+      essenze"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mining.deepslate.1"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'mined-deepslate-2-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmUxMTNhMzEyODhlNGFjZGU0ZTdkZDc0MDMxYjY0NDdjYzZmZDBiNjE0YTc4YTE0YjNhMzMzNGE0ZTk2ZTU1NSJ9fX0=
+    slot: 29
+    priority: 3
+    display_name: '&#F9FB97☂ &fEstrazione Deepslate Livello 2'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE2.000 Minerali di Ferro Deepslate ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+20.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+10.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:deepslate_iron_ore%"
+          output: "2000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fDevi rompere &#cf4242%math_0:_2000-{statistic_mine_block:deepslate_iron_ore}%
+            &fblocchi in più."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Mined Deepslate 3 #
+#####################
+  'mined-deepslate-3-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmM1YmY0OWZlYmVjOTU1ZWIzYjMyOGNlMTcwOWY3YmI5ZjQ2OWMyN2E3ZmY0MGQxMzA2OTQyYzA4Zjk2MjUwZSJ9fX0=
+    slot: 30
+    priority: 1
+    display_name: '&#F9FB97☂ &fMinatore Deepslate Livello 3'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mining.deepslate.3"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE3.000 Minerali di Lapislazzuli Deepslate ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+50.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+25.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'mined-deepslate-3-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmM1YmY0OWZlYmVjOTU1ZWIzYjMyOGNlMTcwOWY3YmI5ZjQ2OWMyN2E3ZmY0MGQxMzA2OTQyYzA4Zjk2MjUwZSJ9fX0=
+    slot: 30
+    priority: 2
+    display_name: '&#F9FB97☂ &fMinatore Deepslate Livello 3'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE3.000 Minerali di Lapislazzuli Deepslate ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+50.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+25.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:deepslate_lapis_ore%"
+          output: "3000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.mining.deepslate.3"
+    - "[console] eco give %player_name% 50000"
+    - "[console] essence give %player_name% 25000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      3 di Estrazione Deepslate e hai ricevuto &#feb801+50.000 &8- &#ADF3FD25.000
+      essenze"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mining.deepslate.2"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'mined-deepslate-3-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmM1YmY0OWZlYmVjOTU1ZWIzYjMyOGNlMTcwOWY3YmI5ZjQ2OWMyN2E3ZmY0MGQxMzA2OTQyYzA4Zjk2MjUwZSJ9fX0=
+    slot: 30
+    priority: 3
+    display_name: '&#F9FB97☂ &fMinatore Deepslate Livello 3'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE3.000 Minerali di Lapislazzuli Deepslate ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+50.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+25.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:deepslate_lapis_ore%"
+          output: "3000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fDevi rompere &#cf4242%math_0:_3000-{statistic_mine_block:deepslate_lapis_ore}%
+            &fblocchi in più."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Mined Deepslate 4 #
+#####################
+  'mined-deepslate-4-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODBjOWM1ZWIxYmZjZjk5YTBkOGM2ZTgyMmM1MDBjOTk3MTAzNjU3NWY0MDExNzVkNGEwNDAwZWMzMmEzYTFhYyJ9fX0=
+    slot: 31
+    priority: 1
+    display_name: '&#F9FB97☂ &fMinatore Deepslate Livello 4'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mining.deepslate.4"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE4.000 Minerali d'Oro Deepslate ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+200.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+50.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'mined-deepslate-4-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODBjOWM1ZWIxYmZjZjk5YTBkOGM2ZTgyMmM1MDBjOTk3MTAzNjU3NWY0MDExNzVkNGEwNDAwZWMzMmEzYTFhYyJ9fX0=
+    slot: 31
+    priority: 2
+    display_name: '&#F9FB97☂ &fMinatore Deepslate Livello 4'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE4.000 Minerali d'Oro Deepslate ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+200.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+50.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:deepslate_gold_ore%"
+          output: "4000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.mining.deepslate.4"
+    - "[console] eco give %player_name% 200000"
+    - "[console] essence give %player_name% 50000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulazioni! Hai sbloccato il Livello
+      4 di Estrazione Deepslate e hai ricevuto &#feb801+200.000 &8- &#ADF3FD50.000
+      essenze"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mining.deepslate.3"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'mined-deepslate-4-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODBjOWM1ZWIxYmZjZjk5YTBkOGM2ZTgyMmM1MDBjOTk3MTAzNjU3NWY0MDExNzVkNGEwNDAwZWMzMmEzYTFhYyJ9fX0=
+    slot: 31
+    priority: 3
+    display_name: '&#F9FB97☂ &fMinatore Deepslate Livello 4'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE4.000 Minerali d'Oro Deepslate ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+200.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+50.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:deepslate_gold_ore%"
+          output: "4000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fDevi rompere &#cf4242%math_0:_8000-{statistic_mine_block:deepslate_gold_ore}%
+            &fblocchi in più."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Mined Deepslate 5 #
+#####################
+  'mined-deepslate-5-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmMzNjFhZjk2YWMyYzk5Nzc0NTA4Mzg0NDY0NTI3OTk4N2FjYTY1Njc5MDQ2ZTVhZGJhNzdmYzVmNGYyODFkMCJ9fX0=
+    slot: 32
+    priority: 1
+    display_name: '&#F9FB97☂ &fMinatore Deepslate Livello 5'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mining.deepslate.5"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE5.000 Minerali di Redstone Deepslate ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+400.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+100.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'mined-deepslate-5-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmMzNjFhZjk2YWMyYzk5Nzc0NTA4Mzg0NDY0NTI3OTk4N2FjYTY1Njc5MDQ2ZTVhZGJhNzdmYzVmNGYyODFkMCJ9fX0=
+    slot: 32
+    priority: 2
+    display_name: '&#F9FB97☂ &fMinatore Deepslate Livello 5'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE5.000 Minerali di Redstone Deepslate ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+400.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+100.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:deepslate_redstone_ore%"
+          output: "5000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.mining.deepslate.5"
+    - "[console] eco give %player_name% 400000"
+    - "[console] essence give %player_name% 100000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulations! You have unlocked Level 5
+      of Mining Deepslate and have received &#feb801+400.000 &8- &#ADF3FD100.000 essences"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mining.deepslate.4"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'mined-deepslate-5-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmMzNjFhZjk2YWMyYzk5Nzc0NTA4Mzg0NDY0NTI3OTk4N2FjYTY1Njc5MDQ2ZTVhZGJhNzdmYzVmNGYyODFkMCJ9fX0=
+    slot: 32
+    priority: 3
+    display_name: '&#F9FB97☂ &fMinatore Deepslate Livello 5'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fRompi: &#41FBCE5.000 Minerali di Redstone Deepslate ⛏"
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+400.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+100.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:deepslate_redstone_ore%"
+          output: "5000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fYou need to break &#cf4242%math_0:_5000-{statistic_mine_block:deepslate_redstone_ore}%
+            &fmore blocks."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Mined Deepslate 6 #
+#####################
+  'mined-deepslate-6-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2UwYWEzYTk1MjVkODY0NmYwNmIxMmE1NGExOTc3MGVhZjMyMDA1N2M5OGViZjYzZTY2M2ZkZTJkOWQ5YjEzMSJ9fX0=
+    slot: 33
+    priority: 1
+    display_name: '&#F9FB97☂ &fMinero Deepslate Nivel 6'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mining.deepslate.6"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fBreak: &#41FBCE6.000 Deepslate Diamond Ores ⛏ "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+650.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+200.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'mined-deepslate-6-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2UwYWEzYTk1MjVkODY0NmYwNmIxMmE1NGExOTc3MGVhZjMyMDA1N2M5OGViZjYzZTY2M2ZkZTJkOWQ5YjEzMSJ9fX0=
+    slot: 33
+    priority: 2
+    display_name: '&#F9FB97☂ &fMinatore Deepslate Livello 1'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fBreak: &#41FBCE6.000 Deepslate Diamond Ores ⛏ "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+650.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+200.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:deepslate_diamond_ore%"
+          output: "6000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.mining.deepslate.6"
+    - "[console] eco give %player_name% 650000"
+    - "[console] essence give %player_name% 200000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulations! You have unlocked Level 1
+      of Mining Deepslate and have received &#feb801+650.000 &8- &#ADF3FD200.000 essences"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mining.deepslate.5"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'mined-deepslate-6-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2UwYWEzYTk1MjVkODY0NmYwNmIxMmE1NGExOTc3MGVhZjMyMDA1N2M5OGViZjYzZTY2M2ZkZTJkOWQ5YjEzMSJ9fX0=
+    slot: 33
+    priority: 3
+    display_name: '&#F9FB97☂ &fMinero Deepslate Nivel 6'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fBreak: &#41FBCE6.000 Deepslate Diamond Ores ⛏ "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+650.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+200.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:deepslate_diamond_ore%"
+          output: "6000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fYou need to break &#cf4242%math_0:_6000-{statistic_mine_block:deepslate_diamond_ore}%
+            &fmore blocks."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Mined Deepslate 7 #
+#####################
+  'mined-deepslate-7-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTEzNTBlMGE2MDY5NjVmMmVmMDk0OTFiYTU0ZWUxMzc5MTVkZTU4YThhMjhhYjEzMGE1M2ZhOGY0MTZiMjhkNSJ9fX0=
+    slot: 34
+    priority: 1
+    display_name: '&#F9FB97☂ &fMinero Deepslate Nivel 7'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mining.deepslate.7"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fBreak: &#41FBCE7.000 Deepslate Emerald Ores ⛏ "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+900.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+300.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'mined-deepslate-7-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTEzNTBlMGE2MDY5NjVmMmVmMDk0OTFiYTU0ZWUxMzc5MTVkZTU4YThhMjhhYjEzMGE1M2ZhOGY0MTZiMjhkNSJ9fX0=
+    slot: 34
+    priority: 2
+    display_name: '&#F9FB97☂ &fMinero Deepslate Nivel 7'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fBreak: &#41FBCE7.000 Deepslate Emerald Ores ⛏ "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+900.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+300.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:deepslate_emerald_ore%"
+          output: "7000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.mining.deepslate.7"
+    - "[console] eco give %player_name% 900000"
+    - "[console] essence give %player_name% 300000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulations! You have unlocked Level 7
+      of Mining Deepslate and have received &#feb801+900.000 &8- &#ADF3FD300.000 essences"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.mining.deepslate.6"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'mined-deepslate-7-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTEzNTBlMGE2MDY5NjVmMmVmMDk0OTFiYTU0ZWUxMzc5MTVkZTU4YThhMjhhYjEzMGE1M2ZhOGY0MTZiMjhkNSJ9fX0=
+    slot: 34
+    priority: 3
+    display_name: '&#F9FB97☂ &fMinero Deepslate Nivel 7'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fBreak: &#41FBCE7.000 Deepslate Emerald Ores ⛏ "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+900.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+300.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%statistic_mine_block:deepslate_emerald_ore%"
+          output: "7000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fYou need to break &#cf4242%math_0:_7000-{statistic_mine_block:deepslate_emerald_ore}%
+            &fmore blocks."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Farming Wheat 1   #
+#####################
+  'farming-wheat-1-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTViMjU5OGM0ZmRiYzgyZjNlNjQ4NGVmMmQ3YThhMjM5N2QwM2QxN2ZhN2YxODlhODFjODUwNWNiZTNlYTNlYyJ9fX0=
+    slot: 37
+    priority: 1
+    display_name: '&#A45FFB☂ &fGranjero de Trigo Nivel 1'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.farming.wheat.1"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB5.000 Trigo 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+10.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+5.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'farming-wheat-1-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTViMjU5OGM0ZmRiYzgyZjNlNjQ4NGVmMmQ3YThhMjM5N2QwM2QxN2ZhN2YxODlhODFjODUwNWNiZTNlYTNlYyJ9fX0=
+    slot: 37
+    priority: 2
+    display_name: '&#A45FFB☂ &fGranjero de Trigo Nivel 1'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB5.000 Trigo 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+10.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+5.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%rivalhoes_wheat%"
+          output: "5000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.farming.wheat.1"
+    - "[console] eco give %player_name% 10000"
+    - "[console] essence give %player_name% 5000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulations! You have unlocked Level 1
+      of Farming Wheat and have received &#feb801+10.000 &8- &#ADF3FD5.000 essences"
+    - "[close]"
+  'farming-wheat-1-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTViMjU5OGM0ZmRiYzgyZjNlNjQ4NGVmMmQ3YThhMjM5N2QwM2QxN2ZhN2YxODlhODFjODUwNWNiZTNlYTNlYyJ9fX0=
+    slot: 37
+    priority: 3
+    display_name: '&#A45FFB☂ &fGranjero de Trigo Nivel 1'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB5.000 Trigo 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+10.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+5.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%rivalhoes_wheat%"
+          output: "5000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fYou need harvest &#cf4242%math_0:_5000-{rivalhoes_wheat}%
+            &fwheat more."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Farming Wheat 2   #
+#####################
+  'farming-wheat-2-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTViMjU5OGM0ZmRiYzgyZjNlNjQ4NGVmMmQ3YThhMjM5N2QwM2QxN2ZhN2YxODlhODFjODUwNWNiZTNlYTNlYyJ9fX0=
+    slot: 38
+    priority: 1
+    display_name: '&#A45FFB☂ &fGranjero de Trigo Nivel 2'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.farming.wheat.2"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB7.500 Trigo 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+20.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+10.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'farming-wheat-2-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTViMjU5OGM0ZmRiYzgyZjNlNjQ4NGVmMmQ3YThhMjM5N2QwM2QxN2ZhN2YxODlhODFjODUwNWNiZTNlYTNlYyJ9fX0=
+    slot: 38
+    priority: 2
+    display_name: '&#A45FFB☂ &fGranjero de Trigo Nivel 2'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB7.500 Trigo 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+20.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+10.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%rivalhoes_wheat%"
+          output: "7500"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.farming.wheat.2"
+    - "[console] eco give %player_name% 20000"
+    - "[console] essence give %player_name% 10000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulations! You have unlocked Level 2
+      of Farming Wheat and have received &#feb801+20.000 &8- &#ADF3FD10.000 essences"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.farming.wheat.1"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'farming-wheat-2-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTViMjU5OGM0ZmRiYzgyZjNlNjQ4NGVmMmQ3YThhMjM5N2QwM2QxN2ZhN2YxODlhODFjODUwNWNiZTNlYTNlYyJ9fX0=
+    slot: 38
+    priority: 3
+    display_name: '&#A45FFB☂ &fGranjero de Trigo Nivel 2'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB7.500 Trigo 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+20.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+10.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%rivalhoes_wheat%"
+          output: "7500"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fYou need harvest &#cf4242%math_0:_7500-{rivalhoes_wheat}%
+            &fwheat more."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Farming Wheat 3   #
+#####################
+  'farming-wheat-3-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTViMjU5OGM0ZmRiYzgyZjNlNjQ4NGVmMmQ3YThhMjM5N2QwM2QxN2ZhN2YxODlhODFjODUwNWNiZTNlYTNlYyJ9fX0=
+    slot: 39
+    priority: 1
+    display_name: '&#A45FFB☂ &fGranjero de Trigo Nivel 3'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.farming.wheat.3"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB10.000 Trigo 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+50.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+25.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'farming-wheat-3-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTViMjU5OGM0ZmRiYzgyZjNlNjQ4NGVmMmQ3YThhMjM5N2QwM2QxN2ZhN2YxODlhODFjODUwNWNiZTNlYTNlYyJ9fX0=
+    slot: 39
+    priority: 2
+    display_name: '&#A45FFB☂ &fGranjero de Trigo Nivel 3'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB10.000 Trigo 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+50.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+25.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%rivalhoes_wheat%"
+          output: "10000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.farming.wheat.3"
+    - "[console] eco give %player_name% 50000"
+    - "[console] essence give %player_name% 25000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulations! You have unlocked Level 3
+      of Farming Wheat and have received &#feb801+50.000 &8- &#ADF3FD25.000 essences"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.farming.wheat.2"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'farming-wheat-3-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTViMjU5OGM0ZmRiYzgyZjNlNjQ4NGVmMmQ3YThhMjM5N2QwM2QxN2ZhN2YxODlhODFjODUwNWNiZTNlYTNlYyJ9fX0=
+    slot: 39
+    priority: 3
+    display_name: '&#A45FFB☂ &fGranjero de Trigo Nivel 3'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB10.000 Trigo 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+50.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+25.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%rivalhoes_wheat%"
+          output: "10000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fYou need harvest &#cf4242%math_0:_10000-{rivalhoes_wheat}%
+            &fwheat more."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Farming Wheat 4   #
+#####################
+  'farming-wheat-4-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTViMjU5OGM0ZmRiYzgyZjNlNjQ4NGVmMmQ3YThhMjM5N2QwM2QxN2ZhN2YxODlhODFjODUwNWNiZTNlYTNlYyJ9fX0=
+    slot: 40
+    priority: 1
+    display_name: '&#A45FFB☂ &fGranjero de Trigo Nivel 4'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.farming.wheat.4"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB15.000 Trigo 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+200.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+50.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'farming-wheat-4-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTViMjU5OGM0ZmRiYzgyZjNlNjQ4NGVmMmQ3YThhMjM5N2QwM2QxN2ZhN2YxODlhODFjODUwNWNiZTNlYTNlYyJ9fX0=
+    slot: 40
+    priority: 2
+    display_name: '&#A45FFB☂ &fGranjero de Trigo Nivel 4'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB15.000 Trigo 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+200.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+50.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%rivalhoes_wheat%"
+          output: "15000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.farming.wheat.4"
+    - "[console] eco give %player_name% 200000"
+    - "[console] essence give %player_name% 50000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulations! You have unlocked Level 4
+      of Farming Wheat and have received &#feb801+200.000 &8- &#ADF3FD50.000 essences"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.farming.wheat.3"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'farming-wheat-4-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTViMjU5OGM0ZmRiYzgyZjNlNjQ4NGVmMmQ3YThhMjM5N2QwM2QxN2ZhN2YxODlhODFjODUwNWNiZTNlYTNlYyJ9fX0=
+    slot: 40
+    priority: 3
+    display_name: '&#A45FFB☂ &fGranjero de Trigo Nivel 4'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB15.000 Trigo 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+200.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+50.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%rivalhoes_wheat%"
+          output: "15000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fYou need harvest &#cf4242%math_0:_15000-{rivalhoes_wheat}%
+            &fwheat more."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Farming Carrot 1  #
+#####################
+  'farming-carrot-1-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmYyNWE5Nzk5OGZmYzU4MWI5NTdkNzMxNjFhYjE4OThjYWM1Y2VjODljODliMzRjMjNjYjZkNDA3NGM0YzhhYyJ9fX0=
+    slot: 41
+    priority: 1
+    display_name: '&#A45FFB☂ &fGranjero de Zanahorias Nivel 1'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.farming.carrot.1"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB20.000 Zanahorias 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+400.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+100.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'farming-carrot-1-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmYyNWE5Nzk5OGZmYzU4MWI5NTdkNzMxNjFhYjE4OThjYWM1Y2VjODljODliMzRjMjNjYjZkNDA3NGM0YzhhYyJ9fX0=
+    slot: 41
+    priority: 2
+    display_name: '&#A45FFB☂ &fGranjero de Zanahorias Nivel 1'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB20.000 Zanahorias 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+400.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+100.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%rivalhoes_carrot%"
+          output: "20000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.farming.carrot.1"
+    - "[console] eco give %player_name% 400000"
+    - "[console] essence give %player_name% 100000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulations! You have unlocked Level 1
+      of Farming Carrot and have received &#feb801+400.000 &8- &#ADF3FD100.000 essences"
+    - "[close]"
+  'farming-carrot-1-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmYyNWE5Nzk5OGZmYzU4MWI5NTdkNzMxNjFhYjE4OThjYWM1Y2VjODljODliMzRjMjNjYjZkNDA3NGM0YzhhYyJ9fX0=
+    slot: 41
+    priority: 3
+    display_name: '&#A45FFB☂ &fGranjero de Zanahorias Nivel 1'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB20.000 Zanahorias 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+400.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+100.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%rivalhoes_carrot%"
+          output: "20000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fYou need harvest &#cf4242%math_0:_20000-{rivalhoes_carrot}%
+            &fcarrot more."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Farming Carrot 2  #
+#####################
+  'farming-carrot-2-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmYyNWE5Nzk5OGZmYzU4MWI5NTdkNzMxNjFhYjE4OThjYWM1Y2VjODljODliMzRjMjNjYjZkNDA3NGM0YzhhYyJ9fX0=
+    slot: 42
+    priority: 1
+    display_name: '&#A45FFB☂ &fGranjero de Zanahorias Nivel 2'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.farming.carrot.2"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB25.000 Zanahorias 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+650.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+200.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'farming-carrot-2-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmYyNWE5Nzk5OGZmYzU4MWI5NTdkNzMxNjFhYjE4OThjYWM1Y2VjODljODliMzRjMjNjYjZkNDA3NGM0YzhhYyJ9fX0=
+    slot: 42
+    priority: 2
+    display_name: '&#A45FFB☂ &fGranjero de Zanahorias Nivel 2'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB25.000 Zanahorias 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+650.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+200.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%rivalhoes_carrot%"
+          output: "25000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.farming.carrot.2"
+    - "[console] eco give %player_name% 650000"
+    - "[console] essence give %player_name% 200000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulations! You have unlocked Level 2
+      of Farming Carrot and have received &#feb801+650.000 &8- &#ADF3FD200.000 essences"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.farming.carrot.1"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'farming-carrot-2-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmYyNWE5Nzk5OGZmYzU4MWI5NTdkNzMxNjFhYjE4OThjYWM1Y2VjODljODliMzRjMjNjYjZkNDA3NGM0YzhhYyJ9fX0=
+    slot: 42
+    priority: 3
+    display_name: '&#A45FFB☂ &fGranjero de Zanahorias Nivel 2'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB25.000 Zanahorias 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+650.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+200.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%rivalhoes_carrot%"
+          output: "25000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fYou need harvest &#cf4242%math_0:_25000-{rivalhoes_carrot}%
+            &fcarrot more."
+          - "[close]"
+    click_commands:
+    - "[refresh]"
+
+#####################
+# Farming Carrot 3  #
+#####################
+  'farming-carrot-3-claimed':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmYyNWE5Nzk5OGZmYzU4MWI5NTdkNzMxNjFhYjE4OThjYWM1Y2VjODljODliMzRjMjNjYjZkNDA3NGM0YzhhYyJ9fX0=
+    slot: 43
+    priority: 1
+    display_name: '&#A45FFB☂ &fFarming Carrots Level 3'
+    view_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.farming.carrot.3"
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB30.000 Zanahorias 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+900.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+300.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#5BFB1ACompletato ✔"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_NO 1 2"
+    - "[message] &#FBCC23&lQUESTS &7» &fHai già reclamato questa missione!"
+    - "[close]"
+  'farming-carrot-3-unlocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmYyNWE5Nzk5OGZmYzU4MWI5NTdkNzMxNjFhYjE4OThjYWM1Y2VjODljODliMzRjMjNjYjZkNDA3NGM0YzhhYyJ9fX0=
+    slot: 43
+    priority: 2
+    display_name: '&#A45FFB☂ &fFarming Carrots Level 3'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB30.000 Zanahorias 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+900.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+300.000 ☂"
+    - ""
+    - "&#AFFD7F✎ &fStato: &#FBEE45Reclamabile ☁"
+    view_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%rivalhoes_carrot%"
+          output: "30000"
+    click_commands:
+    - "[sound] ENTITY_VILLAGER_YES 1 2"
+    - "[sound] ENTITY_PLAYER_LEVELUP 1 2"
+    - "[console] lp user %player_name% permission set quests.farming.carrot.3"
+    - "[console] eco give %player_name% 900000"
+    - "[console] essence give %player_name% 300000"
+    - "[message] &#FBCC23&lQUESTS &7» &fCongratulations! You have unlocked Level 3
+      of Farming Carrot and have received &#feb801+900.000 &8- &#ADF3FD300.000 essences"
+    - "[close]"
+    click_requirement:
+      requirements:
+        permission:
+          type: "has permission"
+          permission: "quests.farming.carrot.2"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &#eldefbDevi reclamare il livello precedente!"
+          - "[close]"
+  'farming-carrot-3-blocked':
+    material: 
+      basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmYyNWE5Nzk5OGZmYzU4MWI5NTdkNzMxNjFhYjE4OThjYWM1Y2VjODljODliMzRjMjNjYjZkNDA3NGM0YzhhYyJ9fX0=
+    slot: 43
+    priority: 3
+    display_name: '&#A45FFB☂ &fFarming Carrots Level 3'
+    lore:
+    - " "
+    - "&7 Completa questa missione"
+    - "&7 e riceverai una buona"
+    - "&7 ricompensa al termine"
+    - ""
+    - "&#FBEE45☃ Richiesto:"
+    - "&7 ► &fHarvest: &#A45FFB30.000 Zanahorias 🍄 "
+    - ""
+    - "&#7FFB4C✉ Ricompense:"
+    - "&7  • &fSoldi &#feb801+900.000 ⛃"
+    - "&7  • &fEssienze &#ADF3FD+300.000 ☂"
+    - ""
+    - "&#F2C7FB✎ &fStato: &#FB3838Bloccato"
+    click_requirement:
+      requirements:
+        kills:
+          type: ">="
+          input: "%rivalhoes_carrot%"
+          output: "30000"
+          deny_commands:
+          - "[sound] ENTITY_VILLAGER_NO 1 2"
+          - "[message] &#FBCC23&lQUESTS &7» &fYou need harvest &#cf4242%math_0:_30000-{rivalhoes_carrot}%
+            &fcarrots more."
+          - "[close]"
+    click_commands:
+    - "[refresh]"

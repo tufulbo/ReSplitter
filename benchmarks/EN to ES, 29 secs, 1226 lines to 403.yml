@@ -1,0 +1,1226 @@
+# TRANSLATIONS OF GUI MENU FILES
+GUI:
+  # Common and repetitive translation items are clustered in this excerpt
+  Common: ''
+  Common back name: <red>Regresar
+  Common back lore:
+  - ''
+  - '<yellow>Haz clic para regresar.'
+  Common next name: <green>Página siguiente
+  Common next lore:
+  - ''
+  - '<yellow>Haz clic para continuar.'
+  Common previous name: <green>Página anterior
+  Common previous lore:
+  - ''
+  - '<yellow>Haz clic para regresar.'
+  Common fill name: ' '
+  Common fill lore: []
+  # Item-by-item translations are below.
+  General: ''
+  General disband_confirm title: <red>Confirmar eliminación del Clan?
+  General disband_confirm items confirm name: <green>Confirmar
+  General disband_confirm items confirm lore:
+  - ''
+  - '<red>Haz clic para confirmar.'
+  General disband_confirm items cancel name: <green>Cancelar
+  General disband_confirm items cancel lore:
+  - ''
+  - '<yellow>Haz clic para cancelar.'
+  General changeleader_confirm title: <red>Confirmar cambio de Líder del Clan?
+  General changeleader_confirm items confirm name: <green>Confirmar
+  General changeleader_confirm items confirm lore:
+  - ''
+  - '<red>Haz clic para confirmar.'
+  General changeleader_confirm items cancel name: <green>Cancelar
+  General changeleader_confirm items cancel lore:
+  - ''
+  - '<yellow>Haz clic para cancelar.'
+  General clan_homes title: <blue>Inicio del Clan
+  General clan_homes items ally_homes name: <green>Ver inicios de Aliados
+  General clan_homes items ally_homes lore:
+  - ''
+  - '<yellow>Haz clic para abrir.'
+  General clan_homes items create name: <green>Crear un nuevo Inicio
+  General clan_homes items create lore:
+  - ''
+  - '<yellow>Haz clic para crear.'
+  General clan_homes items current name: <green>Inicio %uclans_home:{name}:name%
+  General clan_homes items current lore:
+  - ''
+  - '<yellow>Información del Inicio'
+  - ' <gray>'
+  - '<gray>Servidor: <green>%uclans_home:{name}:server%'
+  - '<gray>Nombre: <aqua>%uclans_home:{name}:name%'
+  - '<gray>Ubicación: <aqua>%uclans_home:{name}:location%'
+  - '<white>Requiere Contraseña: <aqua>%uclans_home:{name}:has_passwd%'
+  - ''
+  - '<yellow>Click izquierdo para teletransportarse'
+  - '<red>Click derecho para eliminar.'
+  General clan_homes items current visit name: <green>Inicio 
+    %uclans_home:{name}:name%
+  General clan_homes items current visit lore:
+  - ''
+  - '<yellow>Información del Inicio'
+  - ' <gray>'
+  - '<gray>Servidor: <green>%uclans_home:{name}:server%'
+  - '<gray>Nombre: <aqua>%uclans_home:{name}:name%'
+  - '<white>Requiere Contraseña: <aqua>%uclans_home:{name}:has_passwd%'
+  General clan_delhome_confirm title: <red>Confirmar eliminación de inicio 
+    <dark_red>%home_name% <red>?
+  General clan_delhome_confirm items confirm name: <green>Haz clic para 
+    confirmar
+  General clan_delhome_confirm items confirm lore:
+  - ' '
+  - '<yellow>Haz clic para ir a confirmar.'
+  General clan_delhome_confirm items cancel name: <green>Haz clic para cancelar
+  General clan_delhome_confirm items cancel lore:
+  - ' '
+  - '<yellow>Haz clic para ir a cancelar.'
+  General noclan_home title: <blue>Clan <gray>| <red>Sin Clan
+  General noclan_home items commands name: <green>Lista de Comandos y Ayuda
+  General noclan_home items commands lore:
+  - '<yellow>Haz clic para ver la lista completa'
+  - <yellow>de comandos para Clanes y Terrenos.
+  General noclan_home items clans name: <green>Todos los Clanes
+  General noclan_home items clans lore:
+  - '<yellow>Haz clic para abrir el menú de lista de clanes.'
+  General noclan_home items create name: <red>No tienes un Clan
+  General noclan_home items create lore:
+  - '<yellow>Haz clic para crear un Clan.'
+  General noclan_home items profile name: <green>Tu perfil
+  General noclan_home items profile lore:
+  - '<yellow>Haz clic para abrir tu perfil'
+  General clan_home title: <blue>Menú del Clan
+  General clan_home items info name: <green>Clan %uclans_tag_color%
+  General clan_home items info lore:
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - '<gray>Patente: <green>%uclans_patent_formated%'
+  - ''
+  - '<gray>Nivel del Clan: <green>%uclans_level%'
+  - '<gray>Puntos del Clan: <green>%uclans_points% <dark_gray>(%uclans_points_to_nextlevel%
+    para el siguiente Nivel)'
+  - '<gray>Banco: <green>%uclans_money_currency%%uclans_bank_balance%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - ' <gray>Desc: <aqua>%uclans_desc_color%'
+  - ' '
+  - '<yellow>Haz clic para abrir una lista de estado.'
+  General clan_home items logger name: <green>Registro del Clan
+  General clan_home items logger lore:
+  - '<yellow>Eventos del Clan'
+  - ' <gray>'
+  - '<gray>Cantidad: <green>%uclans_logger_amount%'
+  - ' '
+  - '<yellow>Haz clic para abrir.'
+  General clan_home items mail name: <green>Buzón del Clan
+  General clan_home items mail lore:
+  - '<yellow>Correo recibido'
+  - ' <gray>'
+  - ' <gray>Total: <green>%uclans_mail_amount%'
+  - '<gray>No leído: <green>%uclans_mail_amount_unread%'
+  - ' '
+  - '<yellow>Haz clic para abrir.'
+  General clan_home items banner name: <green>Estandarte del Clan
+  General clan_home items banner lore:
+  - ' '
+  - '<yellow>Información del Estandarte:'
+  - ''
+  - '<white>Tiene Estandarte: <aqua>%uclans_hasbanner_formated%'
+  - '<white>Estandarte: <aqua>%uclans_banner_material%'
+  - ' '
+  - '<yellow>¡El estandarte del clan es tu marca!'
+  General clan_home items clans name: <green>Todos los Clanes
+  General clan_home items clans lore:
+  - '<yellow>Haz clic para abrir el menú de lista de clanes.'
+  General clan_home items commands name: <green>Lista de Comandos y Ayuda
+  General clan_home items commands lore:
+  - '<yellow>Haz clic para ver la lista completa'
+  - <yellow>de comandos para Clanes y Terrenos.
+  General clan_home items settings name: <green>Configuración del Clan
+  General clan_home items settings lore:
+  - '<yellow>Haz clic para abrir.'
+  General clan_home items home name: <green>Abrir menú de inicios.
+  General clan_home items home lore:
+  - '<yellow>Haz clic para abrir.'
+  General clan_home items ally name: <green>Alianzas
+  General clan_home items ally lore:
+  - ' '
+  - '<gray>Aliados: <aqua>%uclans_clan_count_ally%'
+  - ' '
+  - '<yellow>Haz clic para abrir el menú de alianzas.'
+  General clan_home items rival name: <green>Rivalidades
+  General clan_home items rival lore:
+  - ' '
+  - '<gray>Rivales: <aqua>%uclans_clan_count_rival%'
+  - ' '
+  - '<yellow>Haz clic para abrir el menú de rivalidades.'
+  General clan_home items members name: <green>Miembros del Clan
+  General clan_home items members lore:
+  - ' '
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ' '
+  - '<yellow>Haz clic para abrir el menú de miembros.'
+  General clan_home items levelup name: <green>Subir de Nivel del Clan
+  General clan_home items levelup lore:
+  - ' '
+  - '<gray>Actual: <aqua>%uclans_level%<gray>/<aqua>%uclans_max_level%'
+  - '<gray>Requisitos para el siguiente: <aqua>%uclans_has_next_requeriments_level_formated%'
+  - ' '
+  - '<yellow>Haz clic para abrir.'
+  General clan_home items rewards name: <green>Centro de Recompensas
+  General clan_home items rewards lore:
+  - ' '
+  - '<gray>Para reclamar: <aqua>%uclans_player_rewards_amount%'
+  - ' '
+  - '<yellow>Haz clic para abrir.'
+  General player_profile title: <blue>Perfil <gray>| <green>%uclans_player%
+  General player_profile items head name: <green>%uclans_player%
+  General player_profile items head lore:
+  - ''
+  - ' <gray>Clan: <aqua>%uclans_hasclan_formated%'
+  - '<gray>Rol: <aqua>%uclans_player_role_formated%'
+  - '<gray>Líder: <aqua>%uclans_leader_formated%'
+  - ' '
+  - '<gray>Apodo: <aqua>%uclans_player%'
+  - ' <gray>Kdr: <aqua>%uclans_player_kills%<dark_gray>/<aqua>%uclans_player_deaths%
+    <dark_gray>(%uclans_player_kdr%)'
+  - '<gray>Ingreso el: <aqua>%uclans_player_joindate_formated%'
+  - '<gray>Visto por última vez: <aqua>%uclans_player_lastsee_formated%'
+  General player_profile items invites name: <green>Invitaciones.
+  General player_profile items invites lore:
+  - ''
+  - '<yellow>Gestionar Invitaciones entrantes.'
+  - '<yellow>Haz clic para abrir.'
+  General player_profile items settings name: <green>Configuración del perfil.
+  General player_profile items settings lore:
+  - ''
+  - '<yellow>Edita las preferencias de tu perfil.'
+  - ' '
+  - '<yellow>Haz clic para abrir.'
+  General player_settings title: <blue>Menú de Configuración de Perfil
+  General player_settings items nickname name: <green>Cambiar apodo visible.
+  General player_settings items nickname lore:
+  - ''
+  - '<gray>Nombre: <aqua>%uclans_player_realname%'
+  - '<gray>Actual: <aqua>%uclans_player_nickname%'
+  - ''
+  - '<yellow>CLICK IZQUIERDO para cambiar.'
+  - '<red>CLICK DERECHO para reiniciar.'
+  General player_settings items skin name: <green>Actualizar Skin.
+  General player_settings items skin lore:
+  - ''
+  - '<yellow>Haz clic para actualizar la skin actual.'
+  General player_settings items skin_cooldown name: <green>¡Skin Actualizada!
+  General player_settings items skin_cooldown lore:
+  - ''
+  - '<red>Espera <aqua>%time%</aqua> <red>para actualizar de nuevo.'
+  General player_settings items invite name: <green>Invitaciones del Clan.
+  General player_settings items invite lore:
+  - ''
+  - '<white>Estado: %uclans_player_settings_state:INVITATIONS%'
+  - ''
+  - '<yellow>Haz clic para alternar.'
+  - ''
+  - '<red>Si esta opción está desactivada,'
+  - <red>no recibirás invitaciones de clan.
+  General clan_stats title: <blue>Estadísticas <gray>| %uclans_tag_nocolor%
+  General clan_stats items limits name: '<green>Límites del Clan:'
+  General clan_stats items limits lore:
+  - ' '
+  - '<yellow>Acerca de los Límites:'
+  - ' '
+  - '<gray>Hogares: <aqua>%uclans_limit_home%'
+  - '<gray>Aliados: <aqua>%uclans_limit_ally%'
+  - '<gray>Rivales: <aqua>%uclans_limit_rival%'
+  - '<gray>Espacios: <aqua>%uclans_slots_total%'
+  - ' '
+  - '<yellow>Los límites se incrementan a'
+  - <yellow>medida que el clan gana niveles.
+  General clan_stats items member_rival_ally name: '<green>Miembros, Rivales y Aliados:'
+  General clan_stats items member_rival_ally lore:
+  - ' '
+  - '<yellow>Acerca de Miembros, Rivales y Aliados:'
+  - ' '
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - '<gray>Miembros en Línea: <aqua>%uclans_count_onlinemembers%'
+  - '<gray>Aliados: <aqua>%uclans_clan_count_ally%'
+  - '<gray>Rivales: <aqua>%uclans_clan_count_rival%'
+  General clan_stats items others name: '<green>Otras estadísticas:'
+  General clan_stats items others lore:
+  - ' '
+  - '<yellow>Otros:'
+  - ' '
+  - '<gray>Miembros Uniéndose: <aqua>%uclans_clan_member_joined%'
+  - '<gray>Miembros Saliendo: <aqua>%uclans_clan_member_leave%'
+  - '<gray>Miembros Expulsados: <aqua>%uclans_clan_member_kicked%'
+  - '<gray>Cambios de Etiqueta: <aqua>%uclans_clan_tag_changed%'
+  General clan_stats items status name: '<green>Estado:'
+  General clan_stats items status lore:
+  - ' '
+  - '<yellow>Acerca del Estado:'
+  - ' '
+  - '<gray>Banco: <green>%uclans_money_currency%%uclans_bank_balance%'
+  - '<gray>Almas: <green>%uclans_money_currency%%uclans_clan_souls%'
+  - '<gray>Nivel: <aqua>%uclans_level%'
+  - '<gray>Nivel Máximo Alcanzado: <aqua>%uclans_max_level_reached%'
+  - '<gray>Puntos de Clan: <aqua>%uclans_points%'
+  - '<gray>Misiones Completadas: <aqua>%uclans_quest_finished%'
+  General clan_stats items war name: '<green>Estadísticas de Guerra:'
+  General clan_stats items war lore:
+  - ' '
+  - '<yellow>Acerca de las guerras:'
+  - ' '
+  - '<gray>Victorias de Guerra: <aqua>%uclans_clan_war_win%'
+  - '<gray>Derrotas de Guerra: <aqua>%uclans_clan_war_lose%'
+  - '<gray>Total de Guerra: <aqua>%uclans_clan_war_total%'
+  General clan_stats items kdr name: '<green>KDR:'
+  General clan_stats items kdr lore:
+  - ' '
+  - '<yellow>Acerca del KDR:'
+  - ' '
+  - '<gray>Asesinatos: <aqua>%uclans_clan_kills%'
+  - '<gray>Muertes: <aqua>%uclans_clan_deaths%'
+  - '<gray>KDR Total: <aqua>%uclans_clan_kdr%'
+  General clan_stats items banner name: <green>Estandarte del Clan
+  General clan_stats items banner lore:
+  - ' '
+  - '<yellow>Información del Estandarte:'
+  - ''
+  - '<white>Tiene Estandarte: <aqua>%uclans_hasbanner_formated%'
+  General clan_stats items foundation name: '<green>Fundación:'
+  General clan_stats items foundation lore:
+  - ' '
+  - '<yellow>Acerca de la fundación:'
+  - ' '
+  - '<gray>Patente: <green>%uclans_patent_formated%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Fecha de Creación: <aqua>%uclans_creation_date_formated%'
+  - '<gray>Verificado: <white>%uclans_verified%'
+  - '<gray>Espacios: <white>%uclans_slots% <dark_gray>(+%uclans_slots_extra%)'
+  - '<gray>Abierto para todos: <white>%uclans_isopen_formated%'
+  - ' '
+  - '<gray>Moderadores (%uclans_count_moderators%):'
+  - '  <green>%uclans_moderators%'
+  General clan_stats items members name: <green>Lista de Miembros
+  General clan_stats items members lore:
+  - ' '
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<yellow>Haz clic para abrir.'
+  General clan_stats items homes name: <green>Lista de Hogares
+  General clan_stats items homes lore:
+  - ' '
+  - '<gray>Hogares: <aqua>%uclans_home%'
+  - ''
+  - '<yellow>Haz clic para abrir.'
+  General clan_stats items join name: <green>¡Únete al clan!
+  General clan_stats items join lore:
+  - ' '
+  - '<yellow>Haz clic para unirte al clan'
+  - ''
+  - '<red>Si ya estás participando en'
+  - <red>un clan, te saldrás automáticamente.
+  General clan_settings title: <red>Menú de Configuración
+  General clan_settings items clan_roles name: <green>Roles del Clan
+  General clan_settings items clan_roles lore:
+  - ''
+  - '<yellow>Gestionar roles del clan.'
+  - '<yellow>Haz clic para abrir.'
+  General clan_settings items member_ban name: <green>Jugadores Baneados.
+  General clan_settings items member_ban lore:
+  - ''
+  - '<white>Baneados: <aqua>%uclans_count_banned%'
+  - ''
+  - '<red>Los jugadores baneados no pueden unirse al clan si'
+  - <red>está abierto, ni pueden ser invitados de nuevo.
+  - ''
+  - '<yellow>Haz clic para abrir.'
+  General clan_settings items webhook name: <green>Discord Webhook.
+  General clan_settings items webhook lore:
+  - ''
+  - '<white>Conectado: <aqua>%uclans_haswebhook_formated%'
+  - '<white>URL: <aqua>%uclans_webhook_urlshort%'
+  - ''
+  - '<yellow>CLICK IZQUIERDO para cambiar.'
+  - '<red>CLICK DERECHO para reiniciar.'
+  General clan_settings items clan_edit name: <green>Editar clan.
+  General clan_settings items clan_edit lore:
+  - ''
+  - '<yellow>Editar ajustes del clan.'
+  - '<yellow>Haz clic para abrir.'
+  General clan_roles title: <red>Roles del Clan
+  General clan_roles items update name: <red>Sincronizar permisos
+  General clan_roles items update lore:
+  - '<yellow>Haz clic para sincronizar con los'
+  - <yellow>permisos por defecto.
+  General clan_roles items blocked name: <red>%name%
+  General clan_roles items blocked lore:
+  - ' '
+  - '<yellow>No puedes editar este rol'
+  General clan_roles_editor title: <red>Editor de Perm. <gray>| <aqua>%name%
+  General clan_roles_editor items current name: <green>%key%
+  General clan_roles_editor items current lore:
+  - ' '
+  - '<white>Estado: %value%'
+  - ''
+  - '<yellow>Haz clic para alternar'
+  General banned_members title: <red>Jugadores Baneados <gray>| <aqua>%amount%
+  General banned_members items current name: <aqua>%uclans_player%
+  General banned_members items current lore:
+  - '<yellow>Haz clic para <red>DESBANEAR</red><yellow> a este jugador.'
+  General banned_members items add name: <red>Banear a un jugador
+  General banned_members items add lore:
+  - '<yellow>Haz clic para banear.'
+  General clan_actions title: <red>Editar Clan
+  General clan_actions items desc name: <green>Cambiar la Descripción del Clan
+  General clan_actions items desc lore:
+  - '<yellow>Haz clic para cambiar la descripción del clan.'
+  General clan_actions items modtag name: <green>Cambiar la Etiqueta del clan
+  General clan_actions items modtag lore:
+  - '<yellow>Haz clic para cambiar la etiqueta del clan.'
+  General clan_actions items join_leave name: <green>Unirse y Salir
+  General clan_actions items join_leave lore:
+  - ' '
+  - '<white>Estado: %uclans_actions_state:JOINLEAVE%'
+  - ''
+  - '<yellow>Haz clic para alternar'
+  - ' '
+  - '<red>Cuando esté desactivado, tu clan no'
+  - <red>verá más mensajes al
+  - <red>entrar o salir.
+  General clan_actions items opened name: <green>Clan abierto para todos
+  General clan_actions items opened lore:
+  - ' '
+  - '<white>Estado: %uclans_actions_state:OPENED%'
+  - ''
+  - '<yellow>Haz clic para activar o desactivar si'
+  - <yellow>el clan está abierto para todos o solo por invitación.
+  General clan_actions items publichomes name: <green>Hogares públicos
+  General clan_actions items publichomes lore:
+  - ' '
+  - '<white>Estado: %uclans_actions_state:PUBLICHOMES%'
+  - ''
+  - '<yellow>Haz clic para activar o desactivar para'
+  - <yellow>hacer los hogares públicos y
+  - <yellow>visibles para otros clanes.
+  General clan_actions items ff name: <green>Fuego Amigo
+  General clan_actions items ff lore:
+  - ' '
+  - '<white>Estado: %uclans_actions_state:CLANFF%'
+  - ''
+  - '<yellow>Haz clic para alternar'
+  - ' '
+  - '<red>Cuando esté activado, los miembros pueden'
+  - <red>atacarse entre sí.
+  General clan_actions items allysharedhome name: <green>Hogar de Alianza 
+    Compartido
+  General clan_actions items allysharedhome lore:
+  - ' '
+  - '<white>Estado: %uclans_actions_state:ALLYSHAREDHOME%'
+  - ''
+  - '<yellow>Haz clic para alternar'
+  - ' '
+  - '<red>Cuando está deshabilitado, los hogares de tu clan'
+  - <red>no aparecerán en la lista de hogares aliados.
+  General clan_actions items allysharedchat name: <green>Chat de Alianza 
+    Compartido
+  General clan_actions items allysharedchat lore:
+  - ' '
+  - '<white>Estado: %uclans_actions_state:ALLYSHAREDCHAT%'
+  - ''
+  - '<yellow>Haz clic para alternar'
+  - ' '
+  - '<red>Cuando esté desactivado, tu clan no'
+  - <red>recibir o enviar mensajes de aliados.
+  General clan_actions items warinvite name: <green>Invitaciones de Guerra
+  General clan_actions items warinvite lore:
+  - ' '
+  - '<white>Estado: %uclans_actions_state:WARINVITE%'
+  - ''
+  - '<yellow>Haz clic para alternar'
+  - ' '
+  - '<red>Cuando está deshabilitado, tu clan'
+  - <red>no recibe desafíos
+  General clan_actions items receivemailallies name: <green>Correo de aliados
+  General clan_actions items receivemailallies lore:
+  - ' '
+  - '<white>Estado: %uclans_actions_state:RECEIVEMAILALLIES%'
+  - ''
+  - '<yellow>Haz clic para alternar'
+  - ' '
+  - '<red>Cuando está deshabilitado, tu clan'
+  - <red>no recibirá correo de aliados.
+  General clan_actions items receivemailall name: <green>Correo de Todos
+  General clan_actions items receivemailall lore:
+  - ' '
+  - '<white>Estado: %uclans_actions_state:RECEIVEMAILALL%'
+  - ''
+  - '<yellow>Haz clic para alternar'
+  - ' '
+  - '<red>Cuando está deshabilitado, tu clan'
+  - <red>no recibirá correo de todos los clanes.
+  General clan_actions items delete name: <red>Eliminar el clan
+  General clan_actions items delete lore:
+  - '<yellow>Haz clic para eliminar el clan'
+  - '<red>¡Solo el Líder puede hacer esto!'
+  - '<red>Esto eliminará la protección de tu tierra'
+  - '<red>¡Esto requiere confirmación en CHAT!'
+  - ' '
+  - '<red>¡Precaución, esta acción no se puede deshacer!'
+  General clan_top title: <blue>Lista de Clanes <gray>| <green>%current% <gray>|
+    <aqua>{page}<gray>/<aqua>{pages}
+  General clan_top items active name: '<green>Actual'
+  General clan_top items active lore: []
+  General clan_top items all name: <red>Todos los Clanes
+  General clan_top items all lore:
+  - '<yellow>Haz clic para ver'
+  - ' '
+  General clan_top items kdr name: <red>Mejor KDR
+  General clan_top items kdr lore:
+  - '<yellow>Haz clic para ordenar'
+  - '<yellow>lista por KDR'
+  - ' '
+  General clan_top items kill name: <red>Mejor KILL
+  General clan_top items kill lore:
+  - '<yellow>Haz clic para ordenar'
+  - '<yellow>lista por KILL'
+  - ' '
+  General clan_top items death name: <red>Mejor DEATH
+  General clan_top items death lore:
+  - '<yellow>Haz clic para ordenar'
+  - '<yellow>lista por DEATH'
+  - ' '
+  General clan_top items bank name: <red>Mejor BANK
+  General clan_top items bank lore:
+  - '<yellow>Haz clic para ordenar'
+  - '<yellow>lista por BANK'
+  - ' '
+  General clan_top items member name: <red>Mejor MEMBER
+  General clan_top items member lore:
+  - '<yellow>Haz clic para ordenar'
+  - '<yellow>lista por MIEMBRO'
+  - ' '
+  General clan_top items level name: <red>Mejor Nivel
+  General clan_top items level lore:
+  - '<yellow>Haz clic para ordenar'
+  - '<yellow>lista por nivel'
+  - ' '
+  General clan_top items war name: <red>Mejor Guerra
+  General clan_top items war lore:
+  - '<yellow>Haz clic para ordenar'
+  - '<yellow>lista por Mejor Guerra'
+  - ' '
+  General clan_top items point name: <red>Todos los Puntos
+  General clan_top items point lore:
+  - '<yellow>Haz clic para ordenar'
+  - '<yellow>lista por Mejores Puntos'
+  - ' '
+  General clan_top items patent name: <red>Patente
+  General clan_top items patent lore:
+  - '<yellow>Haz clic para ordenar'
+  - '<yellow>lista por Mejor Patente'
+  - ' '
+  General clan_top items current_war name: <green>Clan %uclans_tag_color%
+  General clan_top items current_war lore:
+  - ''
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - '<gray>Guerras ganadas: <green>%uclans_clan_war_win%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<yellow>Haz clic derecho para ver información.'
+  General clan_top items current_bank name: <green>Clan %uclans_tag_color%
+  General clan_top items current_bank lore:
+  - ''
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - '<gray>Banco: <green>%uclans_money_currency%%uclans_bank_balance%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<yellow>Haz clic derecho para ver información.'
+  General clan_top items current_member name: <green>Clan %uclans_tag_color%
+  General clan_top items current_member lore:
+  - ''
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - '<gray>Miembros: <green>%uclans_count_members%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<yellow>Haz clic derecho para ver información.'
+  General clan_top items current_death name: <green>Clan %uclans_tag_color%
+  General clan_top items current_death lore:
+  - ''
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - '<gray>Muertes: <green>%uclans_clan_deaths%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<yellow>Haz clic derecho para ver información.'
+  General clan_top items current_kill name: <green>Clan %uclans_tag_color%
+  General clan_top items current_kill lore:
+  - ''
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - '<gray>Muertes: <green>%uclans_clan_kills%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<yellow>Haz clic derecho para ver información.'
+  General clan_top items current_kdr name: <green>Clan %uclans_tag_color%
+  General clan_top items current_kdr lore:
+  - ''
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - ' <gray>KDR: <green>%uclans_clan_kdr%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<yellow>Haz clic derecho para ver información.'
+  General clan_top items current_level name: <green>Clan %uclans_tag_color%
+  General clan_top items current_level lore:
+  - ''
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - '<gray>Nivel: <green>%uclans_level%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<yellow>Haz clic derecho para ver información.'
+  General clan_top items current_point name: <green>Clan %uclans_tag_color%
+  General clan_top items current_point lore:
+  - ''
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - '<gray>Puntos: <green>%uclans_points%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<yellow>Haz clic derecho para ver información.'
+  General clan_top items current_all name: <green>Clan %uclans_tag_color%
+  General clan_top items current_all lore:
+  - ''
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - '<gray>Fecha de creación: <green>%uclans_creation_date_formated%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<yellow>Haz clic derecho para ver información.'
+  General clan_top items current_patent name: <green>Clan %uclans_tag_color%
+  General clan_top items current_patent lore:
+  - ''
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - '<gray>Patente: <green>%uclans_patent_formated%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<yellow>Haz clic derecho para ver información.'
+  General clan_top items current name: <green>Clan %uclans_tag_color%
+  General clan_top items current lore:
+  - ''
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - '<gray>Nivel: <green>%uclans_level%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<yellow>Haz clic derecho para ver información.'
+  General clan_top items only_open name: <green>¿Solo clanes abiertos?
+  General clan_top items only_open lore:
+  - ''
+  - '<white>Estado: <aqua>{state}'
+  - '<yellow>Haz clic para aplicar el filtro.'
+  General clan_members_invite title: <blue>Invitar Miembros
+  General clan_members_invite items current name: <green>%uclans_player%
+  General clan_members_invite items current lore:
+  - ''
+  - '<gray>Apodo: <aqua>%uclans_player%'
+  - ' <gray>Kdr: <aqua>%uclans_player_kills%<dark_gray>/<aqua>%uclans_player_deaths%
+    <dark_gray>(%uclans_player_kdr%)'
+  - '<gray>Ingreso el: <aqua>%uclans_player_joindate_formated%'
+  - '<gray>Visto por última vez: <aqua>%uclans_player_lastsee_formated%'
+  - ' '
+  - '<yellow>Haz clic para invitar.'
+  General clan_members_invite items search name: <red>Buscar
+  General clan_members_invite items search lore:
+  - '<yellow>Haz clic para buscar miembros.'
+  General clan_search_members_invite title: <blue>Buscar <gray>| 
+    <dark_red>%amount% resultado(s)<gray>
+  General clan_search_members_invite items current name: <green>%uclans_player%
+  General clan_search_members_invite items current lore:
+  - ''
+  - '<gray>Apodo: <aqua>%uclans_player%'
+  - ' <gray>Kdr: <aqua>%uclans_player_kills%<dark_gray>/<aqua>%uclans_player_deaths%
+    <dark_gray>(%uclans_player_kdr%)'
+  - '<gray>Ingreso el: <aqua>%uclans_player_joindate_formated%'
+  - '<gray>Visto por última vez: <aqua>%uclans_player_lastsee_formated%'
+  - ' '
+  - '<yellow>Haz clic para invitar.'
+  General rival title: <blue>Lista de rivales <gray>| %uclans_tag_nocolor%
+  General rival items current name: <green>Clan %uclans_tag_color%
+  General rival items current lore:
+  - ''
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - '<gray>Nivel: <green>%uclans_level%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<yellow>Haz clic izquierdo para ver información.'
+  - '<red>Haz clic derecho para eliminar.'
+  General rival items add name: <green>Encuentra nuevos rivales.
+  General rival items add lore:
+  - ''
+  - '<yellow>Haz clic para abrir.'
+  General ally title: <blue>Lista de alianzas <gray>| %uclans_tag_nocolor%
+  General ally items current name: <green>Clan %uclans_tag_color%
+  General ally items current lore:
+  - ''
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - '<gray>Nivel: <green>%uclans_level%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<yellow>Haz clic izquierdo para ver información.'
+  - '<red>Haz clic derecho para eliminar.'
+  General ally items add name: <green>Encuentra nuevos aliados
+  General ally items add lore:
+  - ''
+  - '<yellow>Haz clic para abrir.'
+  General members title: <blue>Lista de Miembros <gray>| %uclans_tag_nocolor%
+  General members items invite name: <green>Invitar jugadores
+  General members items invite lore:
+  - '<yellow>Haz clic para invitar nuevos miembros'
+  General members items onlines name: <green>¿Jugadores en línea?
+  General members items onlines lore:
+  - ''
+  - '<white>Estado: <red>{state}'
+  - '<yellow>Haz clic para filtrar.'
+  General members items current name: <green>%uclans_player%
+  General members items current lore:
+  - ''
+  - '<gray>Rol: <aqua>%uclans_player_role_formated%'
+  - '<gray>Apodo: <aqua>%uclans_player%'
+  - ' <gray>Kdr: <aqua>%uclans_player_kills%<dark_gray>/<aqua>%uclans_player_deaths%
+    <dark_gray>(%uclans_player_kdr%)'
+  - '<gray>Ingreso el: <aqua>%uclans_player_joindate_formated%'
+  - '<gray>Visto por última vez: <aqua>%uclans_player_lastsee_formated%'
+  - ' '
+  - '<yellow>Haz clic para ver el perfil.'
+  General listhomes title: <blue>Lista de Hogares <gray>| %uclans_tag_nocolor%
+  General listhomes items current name: <green>Inicio %uclans_home:{name}:name%
+  General listhomes items current lore:
+  - ''
+  - '<yellow>Información del Inicio'
+  - ' <gray>'
+  - '<gray>Servidor: <green>%uclans_home:{name}:server%'
+  - '<gray>Nombre: <aqua>%uclans_home:{name}:name%'
+  - '<gray>Ubicación: <aqua>%uclans_home:{name}:location%'
+  General clan_allyhome title: <blue>Hogares Aliados
+  General clan_allyhome items current name: <green>Hogar 
+    %uclans_home:{name}:name% del clan %uclans_tag_color%.
+  General clan_allyhome items current lore:
+  - ''
+  - '<yellow>Información del Inicio'
+  - ' <gray>'
+  - ' <gray>Clan: <aqua>%uclans_tag_color%'
+  - '<gray>Servidor: <green>%uclans_home:{name}:server%'
+  - '<gray>Nombre: <aqua>%uclans_home:{name}:name%'
+  - ''
+  - '<yellow>Haz clic izquierdo para teletransportarse.'
+  General invites title: <blue>Lista de invitaciones <gray>| 
+    <green>%uclans_player_name%
+  General invites items current name: <green>Invitación a %uclans_tag_color%
+  General invites items current lore:
+  - ''
+  - '<yellow>Información de la invitación'
+  - ' <gray>'
+  - ' <gray>Clan: <green>%uclans_tag_color%'
+  - '<gray>Patente: <aqua>%uclans_patent_formated%'
+  - '<gray>Nivel: <aqua>%uclans_level%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<yellow>Haz clic izquierdo para aceptar.'
+  - '<red>Haz clic derecho para denegar.'
+  General banner_home title: <blue>Menú de Banderas
+  General banner_home items current name: <green>Bandera Actual
+  General banner_home items current lore:
+  - ' '
+  - '<yellow>La bandera del clan es tu marca.'
+  - ''
+  - '<aqua><bold><< <red>Usa los botones a los lados <aqua><bold>>>'
+  General banner_home items upload name: <green>Subir
+  General banner_home items upload lore:
+  - ''
+  - '<yellow>Haz clic para abrir el menú de subida.'
+  General banner_home items delete name: <green>Eliminar una Bandera
+  General banner_home items delete lore:
+  - ''
+  - '<yellow>Haz clic para eliminar la bandera actual.'
+  General banner_home items pre name: <green>Banderas pre-creadas.
+  General banner_home items pre lore:
+  - ''
+  - '<yellow>Haz clic para abrir la lista.'
+  General banner_home_pre title: <blue>Seleccionar icono de bandera
+  General banner_home_pre items current name: <green>%name%.
+  General banner_home_pre items current lore:
+  - ''
+  - '<yellow>Haz clic para seleccionar.'
+  General banner_home_pre items common name: '<green>Filtro: <aqua>Común'
+  General banner_home_pre items common lore:
+  - ''
+  - '<yellow>Haz clic para aplicar el filtro.'
+  General banner_home_pre items common_current name: '<green>Filtro: <aqua>Común'
+  General banner_home_pre items common_current lore:
+  - ''
+  - '<green>Filtro actual'
+  General banner_home_pre items head name: '<green>Filtro: <aqua>Cabezas'
+  General banner_home_pre items head lore:
+  - ''
+  - '<yellow>Haz clic para aplicar el filtro.'
+  General banner_home_pre items head_current name: '<green>Filtro: <aqua>Cabezas'
+  General banner_home_pre items head_current lore:
+  - ''
+  - '<green>Filtro actual'
+  General banner_home_pre items banner name: '<green>Filtro: <aqua>Banderas'
+  General banner_home_pre items banner lore:
+  - ''
+  - '<yellow>Haz clic para aplicar el filtro.'
+  General banner_home_pre items banner_current name: '<green>Filtro: <aqua>Banderas'
+  General banner_home_pre items banner_current lore:
+  - ''
+  - '<green>Filtro actual'
+  General banner_delete title: <red>¿Confirmar eliminación de la bandera actual?
+  General banner_delete items confirm name: <green>Confirmar
+  General banner_delete items confirm lore:
+  - ''
+  - '<red>Haz clic para confirmar.'
+  General banner_delete items cancel name: <green>Cancelar
+  General banner_delete items cancel lore:
+  - ''
+  - '<yellow>Haz clic para cancelar.'
+  General banner_upload title: <blue>Subida de Bandera
+  General banner_upload items fill2 name: <red>¡Coloca tu nueva bandera aquí!
+  General banner_upload items fill2 lore:
+  - ' '
+  - '<red>¡Coloca tu nueva bandera aquí!'
+  General banner_upload items upload_slot name: ''
+  General banner_upload items upload_slot lore: []
+  General banner_upload items confirm name: <green>Haz clic para guardar.
+  General banner_upload items confirm lore:
+  - ''
+  - '<yellow>Haz clic aquí para guardar.'
+  General clan_logger title: <blue>Registrador de Clan <gray>| <green>{timer}
+  General clan_logger items current name: '<white>Origen:  <green>%uclans_logger:{id}:plugin%'
+  General clan_logger items current lore:
+  - ' '
+  - '<white>Fecha: <aqua>%uclans_logger:{id}:date% <dark_gray>(Expira: %uclans_logger:{id}:expires%)'
+  - ' '
+  - ' <gray>- <yellow>%uclans_logger:{id}:text%'
+  General clan_logger items clear name: <green>Borrar todo el registro
+  General clan_logger items clear lore:
+  - ''
+  - '<yellow>Haz clic para borrar.'
+  - ''
+  - <red>¡Esto no se puede deshacer
+  General clan_logger items filter_all name: '<green>Filtro: <aqua>Todo'
+  General clan_logger items filter_all lore:
+  - ''
+  - '<yellow>Haz clic para aplicar el filtro.'
+  General clan_logger items filter_all_current name: '<green>Filtro: <aqua>Todo'
+  General clan_logger items filter_all_current lore:
+  - ''
+  - '<green>Filtro actual'
+  General clan_logger items filter_daily name: '<green>Filtro: <aqua>Diario'
+  General clan_logger items filter_daily lore:
+  - ''
+  - '<yellow>Haz clic para aplicar el filtro.'
+  General clan_logger items filter_daily_current name: '<green>Filtro: <aqua>Diario'
+  General clan_logger items filter_daily_current lore:
+  - ''
+  - '<green>Filtro actual'
+  General clan_logger items filter_weekly name: '<green>Filtro: <aqua>Semanal'
+  General clan_logger items filter_weekly lore:
+  - ''
+  - '<yellow>Haz clic para aplicar el filtro.'
+  General clan_logger items filter_weekly_current name: '<green>Filtro: <aqua>Semanal'
+  General clan_logger items filter_weekly_current lore:
+  - ''
+  - '<green>Filtro actual'
+  General clan_logger items filter_monthly name: '<green>Filtro: <aqua>Mensual'
+  General clan_logger items filter_monthly lore:
+  - ''
+  - '<yellow>Haz clic para aplicar el filtro.'
+  General clan_logger items filter_monthly_current name: '<green>Filtro: <aqua>Mensual'
+  General clan_logger items filter_monthly_current lore:
+  - ''
+  - '<green>Filtro actual'
+  General clan_logger items filter_yearly name: '<green>Filtro: <aqua>Anual'
+  General clan_logger items filter_yearly lore:
+  - ''
+  - '<yellow>Haz clic para aplicar el filtro.'
+  General clan_logger items filter_yearly_current name: '<green>Filtro: <aqua>Anual'
+  General clan_logger items filter_yearly_current lore:
+  - ''
+  - '<green>Filtro actual'
+  General clear_logger_confirm title: <red>¿Confirmar borrar registro del clan?
+  General clear_logger_confirm items confirm name: <green>Confirmar
+  General clear_logger_confirm items confirm lore:
+  - ''
+  - '<red>Haz clic para confirmar.'
+  General clear_logger_confirm items cancel name: <green>Cancelar
+  General clear_logger_confirm items cancel lore:
+  - ''
+  - '<yellow>Haz clic para cancelar.'
+  General clan_mail title: <blue>Buzón del Clan <gray>| <green>{timer}
+  General clan_mail items current name: '<white>Origen:  <green>%uclans_mail:{id}:from%'
+  General clan_mail items current lore:
+  - ' '
+  - '<white>Fecha: <aqua>%uclans_mail:{id}:date% <dark_gray>(Expira: %uclans_mail:{id}:expires%)'
+  - ' '
+  - ' <gray>- <yellow>%uclans_mail:{id}:text%'
+  General clan_mail items clear name: <green>Borrar todo el buzón
+  General clan_mail items clear lore:
+  - ''
+  - '<yellow>Haz clic para borrar.'
+  - ''
+  - <red>¡Esto no se puede deshacer
+  General clan_mail items filter_all name: '<green>Filtro: <aqua>Todo'
+  General clan_mail items filter_all lore:
+  - ''
+  - '<yellow>Haz clic para aplicar el filtro.'
+  General clan_mail items filter_all_current name: '<green>Filtro: <aqua>Todo'
+  General clan_mail items filter_all_current lore:
+  - ''
+  - '<green>Filtro actual'
+  General clan_mail items filter_unread name: '<green>Filtro: <aqua>No leído'
+  General clan_mail items filter_unread lore:
+  - ''
+  - '<yellow>Haz clic para aplicar el filtro.'
+  General clan_mail items filter_unread_current name: '<green>Filtro: <aqua>No leído'
+  General clan_mail items filter_unread_current lore:
+  - ''
+  - '<green>Filtro actual'
+  General clan_mail items filter_read name: '<green>Filtro: <aqua>Leído'
+  General clan_mail items filter_read lore:
+  - ''
+  - '<yellow>Haz clic para aplicar el filtro.'
+  General clan_mail items filter_read_current name: '<green>Filtro: <aqua>Leído'
+  General clan_mail items filter_read_current lore:
+  - ''
+  - '<green>Filtro actual'
+  General clear_mail_confirm title: <red>¿Confirmar borrar buzón?
+  General clear_mail_confirm items confirm name: <green>Confirmar
+  General clear_mail_confirm items confirm lore:
+  - ''
+  - '<red>Haz clic para confirmar.'
+  General clear_mail_confirm items cancel name: <green>Cancelar
+  General clear_mail_confirm items cancel lore:
+  - ''
+  - '<yellow>Haz clic para cancelar.'
+  General levelup_confirm title: <red>¿Confirmar Subida de Nivel?
+  General levelup_confirm items confirm name: <green>Confirmar
+  General levelup_confirm items confirm lore:
+  - ''
+  - '<red>Haz clic para confirmar.'
+  General levelup_confirm items cancel name: <green>Cancelar
+  General levelup_confirm items cancel lore:
+  - ''
+  - '<yellow>Haz clic para cancelar.'
+  General levelup_home title: <blue>Subida de Nivel del Clan <gray>| 
+    <aqua>%uclans_level%<gray>/<aqua>%uclans_max_level%
+  General levelup_home items current name: '<green>Nivel: <aqua>{level}'
+  General levelup_home items current lore:
+  - ' '
+  - '<white>Contiene recompensas: <aqua>{has_rewards}'
+  - '{REWARDS}'
+  - '<Yellow>Requisitos para subir de nivel:'
+  - '{REQUERIMENTS}'
+  - ''
+  - '{ACTION}'
+  General levelup_home items levelup name: '<green>Nivel: <aqua>{level}'
+  General levelup_home items levelup lore:
+  - ' '
+  - '<green>¡Nivel superado con éxito!'
+  - '<yellow>Las recompensas se han enviado a'
+  - <yellow>la caja de recolección.
+  General levelup_home items surprise name: '<green><bold>Sorpresa</bold></green>
+    <gray>(<green>Nivel: <aqua>{level}<gray>)'
+  General levelup_home items surprise lore:
+  - ' '
+  - '<green>¡Nivel superado con éxito!'
+  - '<yellow>¡Tu clan recibirá una recompensa sorpresa!'
+  - ''
+  - '<green><bold>¡Haz clic para recoger!'
+  General levelup_home items surprise_collected name: '<red><bold>Sorpresa</bold></red>
+    <gray>(<green>Nivel: <aqua>{level}<gray>)'
+  General levelup_home items surprise_collected lore:
+  - ' '
+  - '<green>¡Nivel superado con éxito!'
+  - '<yellow>¡Recompensa sorpresa!'
+  - ''
+  - '<red>¡Ya recolectado!'
+  General levelup_home items finallist name: '<red><bold>Fin de Nivel</bold></red>
+    <gray>(<green>Nivel: <aqua>{level}<gray>)'
+  General levelup_home items finallist lore:
+  - ' '
+  - '<yellow>Este es el final. Tu clan ha'
+  - <yellow>alcanzado el nivel máximo, recolecta
+  - <yellow>todas las recompensas.
+  - ''
+  - '<green><bold>¡Felicitaciones!'
+  General levelup_home items rewards name: <green>Centro de Recompensas
+  General levelup_home items rewards lore:
+  - ' '
+  - '<white>Para reclamar: <aqua>%uclans_player_rewards_amount%'
+  - ''
+  - '<yellow>Haz clic para abrir.'
+  General levelup_rewards title: <blue>Centro de Recompensas <gray>| 
+    <aqua>%uclans_player_rewards_amount%
+  General levelup_rewards items current name: <green>{description}
+  General levelup_rewards items current lore:
+  - ' '
+  - '<white>Remitente: <aqua>{sender}'
+  - '<white>Fecha: <aqua>{date}'
+  - '<white>Recompensas:'
+  - '{REWARDS}'
+  - '<green><bold>¡Haz clic para recoger!'
+  General clan_rival_search title: <blue>Buscar rivalidades <gray>| 
+    <aqua>{page}<gray>/<aqua>{pages}
+  General clan_rival_search items current name: <green>Clan %uclans_tag_color%
+  General clan_rival_search items current lore:
+  - ''
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - '<gray>Nivel: <green>%uclans_level%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<red>Haz clic para añadir.'
+  General clan_ally_search title: <blue>Buscar alianzas <gray>| 
+    <aqua>{page}<gray>/<aqua>{pages}
+  General clan_ally_search items current name: <green>Clan %uclans_tag_color%
+  General clan_ally_search items current lore:
+  - ''
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - '<gray>Nivel: <green>%uclans_level%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<red>Haz clic para añadir.'
+  General anvil_clancreate title: <blue>¡Crear un nuevo clan!
+  General anvil_clancreate items left name: <white>Escribe tu texto arriba
+  General anvil_clancreate items left lore:
+  - '<white>Escribe tu texto arriba'
+  General anvil_clancreate items right name: <red>Volver atrás
+  General anvil_clancreate items right lore:
+  - ''
+  - '<yellow>Haz clic para regresar.'
+  General anvil_clancreate items output name: ' '
+  General anvil_clancreate items output lore:
+  - ''
+  - '<yellow>Haz clic para crear.'
+  General anvil_clanhomecreate title: <blue>¡Crear un hogar para el clan!
+  General anvil_clanhomecreate items left name: <white>Escribe tu texto arriba
+  General anvil_clanhomecreate items left lore:
+  - '<white>Escribe tu texto arriba'
+  General anvil_clanhomecreate items right name: <red>Volver atrás
+  General anvil_clanhomecreate items right lore:
+  - ''
+  - '<yellow>Haz clic para regresar.'
+  General anvil_clanhomecreate items output name: ' '
+  General anvil_clanhomecreate items output lore:
+  - ''
+  - '<yellow>Crear un nuevo hogar.'
+  General anvil_changenickname title: <blue>¡Cambiar apodo!
+  General anvil_changenickname items left name: <white>Escribe tu texto arriba
+  General anvil_changenickname items left lore:
+  - '<white>Escribe tu texto arriba'
+  General anvil_changenickname items right name: <red>Volver atrás
+  General anvil_changenickname items right lore:
+  - ''
+  - '<yellow>Haz clic para regresar.'
+  General anvil_changenickname items output name: ' '
+  General anvil_changenickname items output lore:
+  - ''
+  - '<yellow>Haz clic para cambiar.'
+  General anvil_clandiscordcreatewebhook title: <blue>¡Nuevo webhook!
+  General anvil_clandiscordcreatewebhook items left name: <white>Escribe tu 
+    texto arriba
+  General anvil_clandiscordcreatewebhook items left lore:
+  - '<white>Escribe tu texto arriba'
+  General anvil_clandiscordcreatewebhook items right name: <red>Volver atrás
+  General anvil_clandiscordcreatewebhook items right lore:
+  - ''
+  - '<yellow>Haz clic para regresar.'
+  General anvil_clandiscordcreatewebhook items output name: ' '
+  General anvil_clandiscordcreatewebhook items output lore:
+  - ''
+  - '<yellow>Haz clic para crear.'
+  General anvil_clanmodtag title: <blue>¡Cambiar etiqueta del clan!
+  General anvil_clanmodtag items left name: <white>Escribe tu texto arriba
+  General anvil_clanmodtag items left lore:
+  - '<white>Escribe tu texto arriba'
+  General anvil_clanmodtag items right name: <red>Volver atrás
+  General anvil_clanmodtag items right lore:
+  - ''
+  - '<yellow>Haz clic para regresar.'
+  General anvil_clanmodtag items output name: ' '
+  General anvil_clanmodtag items output lore:
+  - ''
+  - '<yellow>Haz clic para cambiar la etiqueta del clan.'
+  General anvil_clandesc title: <blue>¡Crear descripción del clan!
+  General anvil_clandesc items left name: <white>Escribe tu texto arriba
+  General anvil_clandesc items left lore:
+  - '<white>Escribe tu texto arriba'
+  General anvil_clandesc items right name: <red>Volver atrás
+  General anvil_clandesc items right lore:
+  - ''
+  - '<yellow>Haz clic para regresar.'
+  General anvil_clandesc items output name: ' '
+  General anvil_clandesc items output lore:
+  - ''
+  - '<yellow>Haz clic para cambiar la descripción del clan.'
+  General admin_home title: <blue>Inicio de Administradores de Clanes
+  General admin_home items extensions name: <green>Extensiones
+  General admin_home items extensions lore:
+  - ' '
+  - '<yellow>Haz clic para abrir.'
+  General admin_home items languages name: <green>Idioma
+  General admin_home items languages lore:
+  - ' '
+  - '<white>Actual: <aqua>%uclans_current_lang%'
+  - '<yellow>Haz clic para abrir.'
+  General admin_home items reload name: <red>Recargar el plugin.
+  General admin_home items reload lore:
+  - ' '
+  - <yellow>Haz clic para cerrar y recargar.
+  General admin_home items clans name: <red>Todos los Clanes.
+  General admin_home items clans lore:
+  - ' '
+  - <yellow>Haz clic para ver y editar.
+  General admin_home items players name: <red>Todos los Jugadores.
+  General admin_home items players lore:
+  - ' '
+  - <yellow>Haz clic para ver y editar.
+  General admin_home items help name: <green>Ayuda de UClans
+  General admin_home items help lore:
+  - ' '
+  - <yellow>Haz clic para ver la lista de comandos.
+  General admin_extension title: <Blue>Configuración de Extensiones
+  General admin_extension items all name: <green>Todas las extensiones
+  General admin_extension items all lore:
+  - ' '
+  - <yellow>Haz clic para abrir
+  General admin_extension items instaled name: <green>Extensiones Instaladas
+  General admin_extension items instaled lore:
+  - ' '
+  - <yellow>Haz clic para abrir.
+  General admin_extension items reload name: <green>Recargar extensiones
+  General admin_extension items reload lore:
+  - ' '
+  - <yellow>Haz clic para recargar.
+  General admin_extension_list title: <Blue>Extensiones <gray>| <aqua>{type}
+  General admin_extension_list items current_all name: <green>{name}
+  General admin_extension_list items current_all lore:
+  - ' '
+  - '<white>Nombre: <aqua>{name}'
+  - '<white>Estado: <aqua>{state}'
+  - '<white>Descargado: <aqua>{downloaded}'
+  - ''
+  - <yellow>CLIC IZQUIERDO para descargar.
+  General admin_extension_list items current_instaled name: <green>{name}
+  General admin_extension_list items current_instaled lore:
+  - ' '
+  - '<white>Nombre: <aqua>{name}'
+  - '<white>Estado: <aqua>{status}'
+  - '<white>Autor: <aqua>{author}'
+  - '<white>Versión: <aqua>{version}'
+  - '<white>Descripción: <aqua>{description}'
+  - '<white>Categoría: <aqua>{category}'
+  - ''
+  - <yellow>CLIC IZQUIERDO para actualizar.
+  General admin_languages title: <blue>Idiomas <gray>| 
+    <aqua>%uclans_current_lang%
+  General admin_languages items current name: <green>Idioma {id}
+  General admin_languages items current lore:
+  - ' '
+  - '<yellow>Haz clic para cambiar.'
+  General admin_languages items language name: <green>Idioma 
+    %uclans_current_lang%
+  General admin_languages items language lore:
+  - ' '
+  - '<white>Actual: <aqua>%uclans_current_lang%'
+  General admin_clans_home title: <blue>Todos los Clanes <gray>| 
+    <aqua>{page}<gray>/<aqua>{pages}
+  General admin_clans_home items current name: <green>Clan %uclans_tag_color%
+  General admin_clans_home items current lore:
+  - ''
+  - '<yellow>Información del Clan'
+  - ' <gray>'
+  - '<gray>Nivel: <green>%uclans_level%'
+  - ' <gray>'
+  - ' <gray>Tag: <aqua>%uclans_tag_color%'
+  - '<gray>Líder: <aqua>%uclans_leader%'
+  - '<gray>Miembros: <aqua>%uclans_count_members%'
+  - ''
+  - '<yellow>Haz clic para editar.'
+  General admin_clans_edit title: <blue>Editar Clan <gray>| 
+    <aqua>%uclans_tag_color%
+  General admin_players_home title: <blue>Todos los Jugadores <gray>| 
+    <aqua>{page}<gray>/<aqua>{pages}
+  General admin_players_home items current name: <green>%uclans_player%
+  General admin_players_home items current lore:
+  - ''
+  - ' <gray>Clan: <aqua>%uclans_hasclan_formated%'
+  - '<gray>Rol: <aqua>%uclans_player_role_formated%'
+  - '<gray>Líder: <aqua>%uclans_leader_formated%'
+  - ' '
+  - '<gray>Apodo: <aqua>%uclans_player%'
+  - ' <gray>Kdr: <aqua>%uclans_player_kills%<dark_gray>/<aqua>%uclans_player_deaths%
+    <dark_gray>(%uclans_player_kdr%)'
+  - '<gray>Ingreso el: <aqua>%uclans_player_joindate_formated%'
+  - '<gray>Visto por última vez: <aqua>%uclans_player_lastsee_formated%'
+  - ''
+  - '<yellow>Haz clic para editar.'
+  General admin_players_edit title: <blue>Editar Jugador <gray>| 
+    <aqua>%uclans_player_name%

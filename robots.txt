@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tufulbo.github.io/ReSplitter/sitemap.xml
+
+# Allow crawling of all content
+Crawl-delay: 1
+
+# Disallow crawling of any temporary or development files
+Disallow: /*.tmp$
+Disallow: /*.log$
+Disallow: /node_modules/
+Disallow: /.git/
